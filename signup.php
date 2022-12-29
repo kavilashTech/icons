@@ -53,7 +53,7 @@ include 'includes/header.php'; ?>
             </div>
             <div class="form-group">
               <label class="control-label" for="testQuestion">12 + 8 =</label>
-              <input id="testQuestionA" name="testQuestionA" type="text" minlength="2" maxlength="20" class="form-control" placeholder="Enter Answer" value="20" required>
+              <input id="testQuestionA" name="testQuestionA" type="text" minlength="2" maxlength="20" class="form-control" placeholder="Enter Answer" required>
               <label id="helptestquestion" style="font-size:12px">Let us know you are not a ROBOT!</label>
             </div>
             <!-- <div class="g-recaptcha" data-sitekey="6Lex9RIUAAAAAKTF27FOxb1PCWk-noAq7aLnCCLv"></div> 
@@ -159,7 +159,7 @@ if (isset($_POST['ru_email'])) {
       $phpemail->isHTML(true);
 
       //embedded image
-      $phpemail->AddEmbeddedImage("/img/mail/img1.jpg", "mahabs", "Mahabs");
+      // $phpemail->AddEmbeddedImage("/img/mail/img1.jpg", "mahabs", "Mahabs");
 
       // Set content-type header for sending HTML email 
       // TODO Check these lines
