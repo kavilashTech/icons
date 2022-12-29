@@ -238,13 +238,13 @@
           <h2 class="section-heading animated" data-animation="bounceInUp">About the Conference</h2>
           <br>
           <h3>Conference Structure</h3>
-          <p style="font-size:17px;">Two days of pre-conference workshops are organized during <strong>ICONS 2023</strong>, covering topics such as (i) Fatigue life and fracture assessment of steel and concrete structural components, (ii) Design, manufacturing and quality assurance of large size components. Experts from the above domain areas will deliver technical talks.</p>
-          <p style="font-size:17px;">Conference is structured with plenary lectures, keynote lectures and several invited lectures apart from contributed papers as podium/poster presentations. Plenary and keynote lectures would be held at the main auditorium, while oral contributory presentations would be in parallel sessions. Two special sessions devoted to posters are scheduled on second and third day of ICONS 2023.</p>
-          <p style="font-size:17px;">To encourage young participants, awards for oral and poster presentations are planned.</p>
+          <p style="font-size:17px;" class="align-left">Two days of pre-conference workshops are organized during <strong>ICONS 2023</strong>, covering topics such as (i) Fatigue life and fracture assessment of steel and concrete structural components, (ii) Design, manufacturing and quality assurance of large size components. Experts from the above domain areas will deliver technical talks.</p>
+          <p style="font-size:17px;" class="align-left">Conference is structured with plenary lectures, keynote lectures and several invited lectures apart from contributed papers as podium/poster presentations. Plenary and keynote lectures would be held at the main auditorium, while oral contributory presentations would be in parallel sessions. Two special sessions devoted to posters are scheduled on second and third day of ICONS 2023.</p>
+          <p style="font-size:17px;" class="align-left">To encourage young participants, awards for oral and poster presentations are planned.</p>
           <br>
           <h3>Conference Policy on Presentations</h3>
-          <p style="font-size:17px;">At least one author of the paper is expected to register and participate in person to present the paper.</p>
-          <p style="font-size:17px;">A maximum of two presentations will be permitted for a registered delegate.</p>
+          <p style="font-size:17px;" class="align-left">At least one author of the paper is expected to register and participate in person to present the paper.</p>
+          <p style="font-size:17px;" class="align-left">A maximum of two presentations will be permitted for a registered delegate.</p>
           
         </div>
       </div>
