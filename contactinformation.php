@@ -119,19 +119,31 @@ if (!isset($_REQUEST["txtFlag"])) {
 		$ademail	= trim($_REQUEST["txtaddlemail"]);
 		$mobile		= trim($_REQUEST["txtmobile"]);
 		$phone		= trim($_REQUEST["txtphone"]);
-		$iim		= trim($_REQUEST["chk_iim"]);
-		$isnt		= trim($_REQUEST["chk_isnt"]);
-		$insis		= trim($_REQUEST["chk_insis"]);
+		// $iim		= trim($_REQUEST["chk_iim"]);
+		// $isnt		= trim($_REQUEST["chk_isnt"]);
+		// $insis		= trim($_REQUEST["chk_insis"]);
 		$nationality	= $_POST['sel_nationality'];
 
-		// if (!empty($_REQUEST['chk_iim'])) {
+		if (!empty($_REQUEST['chk_iim'])) {
+		$iim  = "Y";
+		}else{
+		$iim  = "N";
+		}
+		if (!empty($_REQUEST['chk_isnt'])) {
+		$iim  = "Y";
+		}else{
+		$iim  = "N";
+		}
+		if (!empty($_REQUEST['chk_insis'])) {
+		$iim  = "Y";
+		}else{
+		$iim  = "N";
+		}
 
-		// $iim  = "Y";
 
-		// }else{
 
-		// $iim  = "N";
-		// }
+
+
 
 		$inssql = "INSERT into contact_table (au_firstname, au_lastname, au_affiliation, au_addlemailid, au_mobile, au_phone, au_nationality, au_iim, au_isnt, au_insis, user_table_ru_id, au_active) values
 													   ('$fname', '$lname', '$affi', '$ademail', '$mobile', '$phone', $nationality, '$iim', '$isnt', '$insis', " . $_SESSION['uid'] . ", 1)";
