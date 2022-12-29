@@ -29,8 +29,8 @@ $phpemail->Host = 'smtp.gmail.com';           // Specify main and backup SMTP se
 $phpemail->SMTPAuth = true;                     // Enable SMTP authentication 
 $phpemail->Username = 'sampathraj.mp@gmail.com';       // SMTP username 
 $phpemail->Password = 'ftkqhlddckmalage';         // SMTP password 
-$phpemail->SMTPSecure = 'ssl';                  // Enable TLS encryption, `ssl` also accepted 
-$phpemail->Port = 465;                          // TCP port to connect to 
+$phpemail->SMTPSecure = 'TLS';                  // Enable TLS encryption, `ssl` also accepted 
+$phpemail->Port = 587;                          // TCP port to connect to 
 
 //  MAIL_DRIVER="smtp"
 // MAIL_HOST="smtp.gmail.com"
