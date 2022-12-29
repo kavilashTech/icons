@@ -67,7 +67,7 @@
                     <h2>3rd International Conference on Structural Integrity</h2>
                     <h2>23 - 25 August, 2023</h2>
                     <div>
-                      <a href="#section-services" class="btn-get-started scrollto">Register Now</a>
+                      <a href="signup.php" class="btn-get-started ">Register Now</a>
                     </div>
                   </div>
                 </div>
@@ -85,7 +85,7 @@
                     <h2>3rd International Conference on Structural Integrity</h2>
                     <h2>23 - 25 August, 2023</h2>
                     <div>
-                      <a href="#section-services" class="btn-get-started scrollto">Register Now</a>
+                    <a href="signup.php" class="btn-get-started ">Register Now</a>
                     </div>
                   </div>
                 </div>
@@ -104,7 +104,7 @@
                     <h2>3rd International Conference on Structural Integrity</h2>
                     <h2>23 - 25 August, 2023</h2>
                     <div>
-                      <a href="#section-services" class="btn-get-started scrollto">Register Now</a>
+                    <a href="signup.php" class="btn-get-started ">Register Now</a>
                     </div>
                   </div>
                 </div>
@@ -123,7 +123,7 @@
                     <h2>3rd International Conference on Structural Integrity</h2>
                     <h2>23 - 25 August, 2023</h2>
                     <div>
-                      <a href="#section-services" class="btn-get-started scrollto">Register Now</a>
+                    <a href="signup.php" class="btn-get-started ">Register Now</a>
                     </div>
                   </div>
                 </div>

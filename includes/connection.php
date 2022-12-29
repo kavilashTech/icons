@@ -1,20 +1,20 @@
 
 <?php
 // site url
-//define('SITE_URL', 'http://www.icreach2022.com');
+//define('SITE_URL', 'http://www.icons2023.com');
 
 //Localhost URL
-define('SITE_URL', 'http://localhost/icreach/');
+define('SITE_URL', 'http://localhost/iconsdemo1/');
 
 
-define('ADMIN_EMAIL', 'webteam.cf8@gmail.com');
+define('ADMIN_EMAIL', 'sampathraj.mp@gmail.com');
 // connection mysqli_connect_error
 //$connection = mysqli_connect('localhost', 'kavisoft_emsi17', 'f]X_3cr)nQfT','kavisoft_emsi2k17');
 //$connection = mysqli_connect('localhost', 'kavisoft_emsi17', 'f]X_3cr)nQfT','kavisoft_emsi2k17');
 //$connection = mysqli_connect("localhost", "root", "","cf8");
-$connection = mysqli_connect("localhost", "root", "","icreach2022");
+$connection = mysqli_connect("localhost", "root", "","icons2023");
 
-$dblink = new mysqli("localhost", "root", "","icreach2022");
+$dblink = new mysqli("localhost", "root", "","icons2023");
    if ($dblink->connect_error) {
       die("Connection failed: " . $dblink->connect_error);
    }	

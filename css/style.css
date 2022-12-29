@@ -13,6 +13,118 @@
 @import url("overwrite.css");
 @import url("animate.css");
 
+
+
+
+/*-----TEMP START ------------------------- */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 70px;
+  left: 250;
+  background-color: rgb(6, 107, 161);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  left:250px;
+}
+
+#side_menu{
+  font-size: 14px!important;
+
+}
+#side_menu:hover{
+/* border-bottom: 1px solid red; */
+background-color: rgb(255, 255, 255);
+color:rgb(6, 107, 161)
+}
+
+.sidenav_id{
+  color: white !important;
+  text-align: center!important;
+  font-size: 18px;
+  font-weight: 400;
+  /* border-top: 1px solid #fff; */
+  /* margin-top: 20px; */
+  /* padding-top: 20px; */
+  padding-bottom: 10px;
+  background-color: rgb(171, 191, 235);
+}
+
+.sidenav_id > P {
+  color: rgb(114, 52, 52) !important;
+  text-align: center!important;
+  font-size: 18px;
+  font-weight: bold;
+  /* border-top: 1px solid #fff; */
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  /* padding-bottom: 20px;
+  background-color: rgb(171, 191, 235); */
+}
+
+.sidenav_admin{
+  color:rgb(173, 157, 7);
+  text-align: center!important;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.help_note > a{
+  color:#fff;
+  font-size: 16px;
+  /* margin-left: 2em; */
+  margin-top: 1em;
+
+}
+
+#sel_nationality{
+  width:100%;
+}
+
+.red{
+color:red;
+}
+
+#btncontact{
+  width: 40% !important;
+  background-color: green;
+  margin-left:25px;
+}
+
+/*----TEMP END ---------------------------- */
+
+
+
 /*==========================================================================
   General
   ========================================================================== */
@@ -93,7 +205,9 @@ h5 {
   background-color: #c4daf5!important;
   border-radius: 5px!important;
 }
-
+.hr-blue{
+  border-color: blue;
+}
 blockquote.bigquote {
   border: none;
   font-size: 48px;

@@ -59,12 +59,12 @@
               <li><a href="#">Registration FAQ</a></li>
 			  <?php
 				if (!isset($_SESSION['uid'])){ 
-				echo '<li><a href="#">Sign Up</a></li>';
+				echo '<li><a href="signup.php">Sign Up</a></li>';
 				echo '<li><a href="#">Login</a></li>';
 			
 				} else {
-					echo '<li><a href="contactinformation.php">Contact Information</a></li>';
-					echo '<li><a href="paymentdetails.php">Payment Information</a></li>';
+					// echo '<li><a href="contactinformation.php">Contact Information</a></li>';
+					// echo '<li><a href="">Payment Information</a></li>';
 				}
 				?>
               <!-- <li role="separator" class="divider"></li>
@@ -75,7 +75,13 @@
           </li>
 
           <li><a href="contact.php">Contact</a></li>
-          <li><a href="#" class="btn btn-login">Login</a></li>
+            <?php
+              if (isset($_SESSION['uid'])){
+                echo '<li><a href="logout.php" class="btn btn-login">Logout</a></li>';
+              } else {
+                echo '<li><a href="login.php" class="btn btn-login">Login</a></li>';
+              }
+            ?>
         </ul>
       </div>
       <!--/.navbar-collapse -->

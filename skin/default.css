@@ -68,14 +68,14 @@ a:hover {
 
 /* btn */
 .btn-theme {
-  background: #95cbdd;
+  background: #1a31b3;
 }
 .btn-theme:hover,.btn-theme:focus,.btn-theme:active{
-  background: #85b0be;
+  background: #1a31b3;
 }
 .btn-cta,.btn-cta.btn-lg {
-  background: #85b0be;
-  border-color: #95cbdd;
+  background: #1a31b3;
+  border-color: #1a31b3;
 }
 
 .btn-cta:focus,.btn-cta:active{
