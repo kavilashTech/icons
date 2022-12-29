@@ -21,11 +21,11 @@ if(!empty($_POST["authenticate"]) && $_POST["otp"]!='') {
     if (mysqli_affected_rows($connection) == 1){
 
 // TODO : move ID to session. Trigger welcome email.
-	$sqlID="SELECT icr_id from user_table where ru_userid='".$ru_email."'";
+	$sqlID="SELECT ic_id from user_table where ru_userid='".$ru_email."'";
 	$resultid = mysqli_query($connection, $sqlID);
 	if (mysqli_affected_rows($connection) == 1){
 		$row = $resultid->fetch_assoc();
-		$_SESSION['user_icons_id'] = $row['icr_id'];
+		$_SESSION['user_icons_id'] = $row['ic_id'];
 	}
 
 
