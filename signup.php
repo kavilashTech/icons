@@ -197,8 +197,8 @@ if (isset($_POST['ru_email'])) {
 
 
       // $message = $template;
-             echo $template;
-      exit(0);
+      //        echo $template;
+      // exit(0);
       // ---------- End Email MEssage using Template -------- //
 
       // Send email 
