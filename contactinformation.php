@@ -58,6 +58,8 @@ if (!isset($_REQUEST["txtFlag"])) {
 	$ademail	= "";
 	$mobile		= "";
 	$phone		= "";
+	$isnt      = "";
+	$insis     = "";
 
 	// Check whether data is already available for this user
 
