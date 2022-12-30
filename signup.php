@@ -150,9 +150,10 @@ if (isset($_POST['ru_email'])) {
       $phpemail->addReplyTo('reply@example.com', 'SenderName');
 
       // Add a recipient 
-      $phpemail->addAddress('sampathraj.mp@gmail.com');
+      $phpemail->addAddress($ru_email);
+      // $phpemail->addAddress('sampathraj.mp@gmail.com');
 
-      //$phpemail->addCC('cc@example.com'); 
+      $phpemail->addCC('sampathraj.mp@gmail.com'); 
       //$phpemail->addBCC('bcc@example.com'); 
 
       // Set email format to HTML 
