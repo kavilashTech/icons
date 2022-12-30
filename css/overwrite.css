@@ -237,11 +237,14 @@ a.btn,.btn:focus {
   color: #333333;
   background-color: #f8f8f8;
 }
-
+.btn-cancel {
+  background: #d3d3d3 !important;
+  color: #000 !important;
+}
 
 .btn-primary {
 	outline:0;
-  background: #1C0113;
+  background: #3275f1;
 }
 .btn-primary:hover {
   background: #170110;
