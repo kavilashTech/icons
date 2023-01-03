@@ -60,11 +60,14 @@ if (!isset($_REQUEST["txtFlag"])) {
 	$phone		= "";
 	$isnt      = "";
 	$insis     = "";
+	$sfa     = "";
+
+	$student   = "";
 
 	// Check whether data is already available for this user
 
 	//		$selsql = "SELECT * FROM `icr_contact_table` WHERE icr_user_table_ru_id = " . $uid . " and au_active = 1" ;
-	$selsql = "SELECT a.au_firstname, a.au_lastname, a.au_addlemailid, a.au_phone, a.au_mobile, a.au_affiliation, b.na_name, b.na_id as nationality, a.au_iim, a.au_isnt, a.au_insis FROM contact_table a, nationality b WHERE a.au_nationality = b.na_id and a.user_table_ru_id = " . $uid . " and au_active = 1";
+	$selsql = "SELECT a.au_firstname, a.au_lastname, a.au_addlemailid, a.au_phone, a.au_mobile, a.au_affiliation, b.na_name, b.na_id as nationality, a.au_iim, a.au_isnt, a.au_insis, a.au_sfa, a.au_student FROM contact_table a, nationality b WHERE a.au_nationality = b.na_id and a.user_table_ru_id = " . $uid . " and au_active = 1";
 	// echo '<br><br><br><br><br><br><br>';
 	//  echo $selsql;
 	//  exit(0);
@@ -87,6 +90,9 @@ if (!isset($_REQUEST["txtFlag"])) {
 		$iim		= $result['au_iim'];
 		$isnt 		= $result['au_isnt'];
 		$insis 		= $result['au_insis'];
+		$sfa 		= $result['au_sfa'];
+
+		$student	= $result['au_student'];
 		$nationality	= $result['nationality'];
 
 		// Edit Mode - Record already available;
@@ -124,20 +130,30 @@ if (!isset($_REQUEST["txtFlag"])) {
 		// $insis		= trim($_REQUEST["chk_insis"]);
 		$nationality	= $_POST['sel_nationality'];
 
+		if (!empty($_REQUEST['chk_student'])) {
+		$student  = "Y";
+		}else{
+		$student  = "N";
+		}
 		if (!empty($_REQUEST['chk_iim'])) {
 		$iim  = "Y";
 		}else{
 		$iim  = "N";
 		}
 		if (!empty($_REQUEST['chk_isnt'])) {
-		$iim  = "Y";
+		$isnt  = "Y";
 		}else{
-		$iim  = "N";
+		$isnt = "N";
 		}
 		if (!empty($_REQUEST['chk_insis'])) {
-		$iim  = "Y";
+		$insis = "Y";
 		}else{
-		$iim  = "N";
+		$insis = "N";
+		}
+		if (!empty($_REQUEST['chk_sfa'])) {
+		$sfa  = "Y";
+		}else{
+		$sfa  = "N";
 		}
 
 
@@ -145,8 +161,8 @@ if (!isset($_REQUEST["txtFlag"])) {
 
 
 
-		$inssql = "INSERT into contact_table (au_firstname, au_lastname, au_affiliation, au_addlemailid, au_mobile, au_phone, au_nationality, au_iim, au_isnt, au_insis, user_table_ru_id, au_active) values
-													   ('$fname', '$lname', '$affi', '$ademail', '$mobile', '$phone', $nationality, '$iim', '$isnt', '$insis', " . $_SESSION['uid'] . ", 1)";
+		$inssql = "INSERT into contact_table (au_firstname, au_lastname, au_affiliation, au_addlemailid, au_mobile, au_phone, au_nationality, au_iim, au_isnt, au_insis, ,au_sfa, au_student, user_table_ru_id, au_active) values
+													   ('$fname', '$lname', '$affi', '$ademail', '$mobile', '$phone', $nationality, '$iim', '$isnt', '$insis', ' $student ', " . $_SESSION['uid'] . ", 1)";
 		// echo $inssql . "<BR>";
 		// 				echo $_REQUEST['sel_nationality'] . "<br>";
 		// 				echo $nationality;
@@ -196,6 +212,16 @@ if (!isset($_REQUEST["txtFlag"])) {
 		} else {
 			$insis		= "N";
 		}
+		if (isset($_REQUEST["chk_sfa"])) {
+			$sfa		= "Y";
+		} else {
+			$sfa		= "N";
+		}
+		if (isset($_REQUEST["chk_student"])) {
+			$student		= "Y";
+		} else {
+			$student		= "N";
+		}
 
 
 
@@ -215,7 +241,9 @@ if (!isset($_REQUEST["txtFlag"])) {
 							 au_nationality = '" . $nationality . "',
 							 au_iim = '" . $iim . "',
 							 au_isnt = '" . $isnt . "',
-							 au_insis = '" . $insis . "'
+							 au_insis = '" . $insis . "',
+							 au_sfa = '" . $sfa . "',
+							 au_student = '" . $student . "'
 							 WHERE user_table_ru_id = " . $uid;
 
 		//echo "<BR> " . $updatesql;
@@ -266,6 +294,8 @@ if (!isset($_REQUEST["txtFlag"])) {
 			document.getElementById("chk_iim").disabled = true;
 			document.getElementById("chk_isnt").disabled = true;
 			document.getElementById("chk_insis").disabled = true;
+			document.getElementById("chk_sfa").disabled = true;
+			document.getElementById("chk_student").disabled = true;
 			document.getElementById("sel_nationality").disabled = true;
 		}
 
@@ -388,6 +418,21 @@ if (!isset($_REQUEST["txtFlag"])) {
 					<label for="" class="control-label"></label>
 				</div>
 			</div>
+			<!-- Student Check box - START -->
+			<div class="row mar-bot10">
+				<div class="col-md-3">
+					<label for="chk_student" class="mar-left20">Student</label>&nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="col-md-6">
+					<input type="checkbox" name="chk_student" id="chk_student" <?php if ($student == 'Y') {
+																				echo 'checked';
+																			}
+																			?>>
+					<!-- <span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are a Student)</span> -->
+				</div>
+			</div>
+			<!-- Student Check box - END -->
+
 			<div class="row">
 				<div class="col-md-3">
 					<div class="form-inline">
@@ -493,14 +538,26 @@ if (!isset($_REQUEST["txtFlag"])) {
 			</div>
 			<div class="row mar-top20">
 				<div class="col-md-3">
-					<label for="chk_insis">INSIS Member</label>&nbsp;&nbsp;&nbsp;
+					<label for="chk_insis">InSIS Member</label>&nbsp;&nbsp;&nbsp;
 				</div>
 				<div class="col-md-6">
 					<input type="checkbox" name="chk_insis" id="chk_insis" <?php if ($insis == 'Y') {
 																				echo 'checked';
 																			}
 																			?>>
-					<span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are an INSIS Member)</span>
+					<span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are an InSIS Member)</span>
+				</div>
+			</div>
+			<div class="row mar-top20">
+				<div class="col-md-3">
+					<label for="chk_sfa">SFA Member</label>&nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="col-md-6">
+					<input type="checkbox" name="chk_sfa" id="chk_sfa" <?php if ($sfa == 'Y') {
+																				echo 'checked';
+																			}
+																			?>>
+					<span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are an SFA Member)</span>
 				</div>
 			</div>
 

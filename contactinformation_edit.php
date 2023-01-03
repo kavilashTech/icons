@@ -76,6 +76,9 @@ if (isset($_REQUEST["txtFlag"]))
 			$iim 		= $result['au_iim'];
 			$isnt 		= $result['au_isnt'];
 			$insis 		= $result['au_insis'];
+			$sfa 		= $result['au_sfa'];
+
+			$student 		= $result['au_student'];
 			// Edit Mode - Record already available;
 			$txtFlag = "UPDATE";
 		
@@ -183,14 +186,27 @@ function emailcompare()
                 </div>
               </div>
               <div class="form-group required">
-                <div class="col-xs-12">
+                <div class="col-xs-6">
                   <div class="form-inline">
                   <label>Affiliation</label>
                     <input type="text" class="form-control" id="txtaffi" name="txtaffi" placeholder="Enter Affiliation / Institution" minlength="1" maxlength="100" style="width:98%"  value="<?php echo $affi; ?>">
                     <label for="" class="control-label"></label>
                   </div>
                 </div>
-              </div>
+
+			<!-- Student Check box - START -->
+			<!-- <div class="row mar-bot10"> -->
+      <div class="col-xs-6">
+					<label for="chk_student" >Student</label>&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" name="chk_student" id="chk_student" <?php if ($student == 'Y') {
+																				echo 'checked';
+																			}
+																			?>>
+					<span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are a Student)</span>
+      </div>
+      </div>
+			<!-- </div> -->
+			<!-- Student Check box - END -->
               <div class="form-group required">
                 <div class="col-xs-6">
                   <div class="form-inline">
@@ -252,7 +268,8 @@ function emailcompare()
               <table width="100%">
                   <tr>
                     <td><label for="chk_iim">&nbsp;IIM Member</label>&nbsp;&nbsp;&nbsp;
-                    <input type="checkbox" name="chk_iim" id="chk_iim" <?php if ($iim == 'Y'){echo 'checked';}?>> <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an IIM Member)</span></td>
+                    <input type="checkbox" name="chk_iim" id="chk_iim" <?php if ($iim == 'Y'){echo 'checked';}?>> 
+                    <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an IIM Member)</span></td>
                     <td></td>
                   </tr>
                 </table>
@@ -266,6 +283,7 @@ function emailcompare()
                   </tr>
                 </table>
               </div>
+
             <div class="form-group">
               <table width="100%">
                   <tr>
@@ -275,6 +293,16 @@ function emailcompare()
                   </tr>
                 </table>
               </div>
+            <div class="form-group">
+              <table width="100%">
+                  <tr>
+                    <td><label for="chk_sfa">&nbsp;SFA Member</label>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="chk_sfa" id="chk_sfa" <?php if ($sfa == 'Y'){echo 'checked';}?>> <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an SFA Member)</span></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+
               <div class="form-group">
 				<div class="col-xs-8">
                   <div class="form-inline">
@@ -311,5 +339,5 @@ function emailcompare()
 <div class="v-10"></div>
 <div class="v-10"></div>
 <!-- footer -->
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer_loggedin.php'; ?>
     <?php include 'includes/script.php'; ?>

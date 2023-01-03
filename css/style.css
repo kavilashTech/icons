@@ -31,7 +31,7 @@
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 10px;
   text-decoration: none;
   font-size: 25px;
   color: #fff;
@@ -688,7 +688,14 @@ ul.dropdown-menu li a{
   .intro-content h2 {
     font-size: 22px;
   }
+
+  .sidenav_id{
+    font-size: 14px;
+    font-weight: 600;
+    
+  }
 }
+
 
 .btn-get-started {
   font-size: 15px;
@@ -1346,6 +1353,11 @@ Media queries
     font-size: 35px;
     font-weight: 700;
     padding-top: 70px;
+  }
+  .sidenav_id{
+    font-size: 14px;
+    font-weight: 600;
+    
   }
 }
 @media (max-width: 767px) {
