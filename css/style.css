@@ -19,7 +19,7 @@
 /*-----TEMP START ------------------------- */
 .sidenav {
   height: 100%;
-  width: 250px;
+  width: 15%!important;
   position: fixed;
   z-index: 1;
   top: 70px;
@@ -54,7 +54,7 @@
 #main {
   transition: margin-left .5s;
   padding: 16px;
-  left:250px;
+  margin: left 15% !important;
 }
 
 #side_menu{
@@ -654,7 +654,7 @@ ul.dropdown-menu li a{
 .intro-content h1 {
   color: #fff;
   margin-bottom: 30px;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 700;
   padding-top: 100px;
 }
@@ -666,7 +666,7 @@ ul.dropdown-menu li a{
   color: #fff;
   margin-bottom: 30px;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica,  sans-serif, Arial;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   padding-top: 5px;
   line-height:37px;
@@ -680,11 +680,13 @@ ul.dropdown-menu li a{
 }
 
 @media (max-width: 767px) {
+  
+
   #intro {
     height: 100vh;
   }
   .intro-content h2 {
-    font-size: 34px;
+    font-size: 22px;
   }
 }
 
@@ -1240,7 +1242,7 @@ a.socialIcon:hover,
   align-items: center;
   justify-content: left;
   height: 45%;
-  width: 43%;
+  width: 50%;
   /* border: 1px solid red; */
   border-radius: 0px 8px 8px 0px;
   margin-top: 10%;
@@ -1313,6 +1315,14 @@ Media queries
   .credits {
     text-align: right;
   }
+
+  .sidenav{
+    width: 15% !important;
+  }
+
+  #main{
+    margin-left: 15%!important;
+  }
 }
 @media (min-width: 959px) and (max-width: 1199px) {
   .navbar-nav {
@@ -1329,6 +1339,13 @@ Media queries
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .navbar-nav {
     margin-top: 20px;
+  }
+  .intro-content h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 70px;
   }
 }
 @media (max-width: 767px) {

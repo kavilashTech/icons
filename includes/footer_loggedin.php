@@ -25,8 +25,7 @@
         <div class="col-lg-5 col-xs-12 about-company">
           <h2>ICONS 2023</h2>
           <p class="pad-bot20 text-white-50">3rd International Conference on Structural Integrity,<br> IGCAR, Kalpakkam, India </p>
-          <p><a href="#"><i class="fa fa-facebook-square mar-right5"></i></a><a href="#"><i
-                class="fa fa-linkedin-square"></i></a></p>
+
         </div>
         <div class="col-lg-3 col-xs-12 links">
           <h4 class="mt-lg-0 mt-sm-3">Quick Links</h4>
