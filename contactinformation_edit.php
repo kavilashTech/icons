@@ -216,8 +216,8 @@ function emailcompare()
                   </div>
                 </div>
                 <div class="col-xs-6">
-                <label>Phone No.</label>
-                  <input type="tel" class="form-control" id="txtphone" name="txtphone" placeholder="Enter Phone"  maxlength="15" style="width:98%;"  value="<?php echo $phone; ?>">
+                <label>Alternate Mobile</label>
+                  <input type="tel" class="form-control" id="txtphone" name="txtphone" placeholder="Enter Alternate Mobile"  maxlength="15" style="width:98%;"  value="<?php echo $phone; ?>">
                 </div>
               </div>
               <div class="form-group required">
@@ -287,8 +287,8 @@ function emailcompare()
             <div class="form-group">
               <table width="100%">
                   <tr>
-                    <td><label for="chk_insis">&nbsp;INSIS Member</label>&nbsp;&nbsp;&nbsp;
-                    <input type="checkbox" name="chk_insis" id="chk_insis" <?php if ($insis == 'Y'){echo 'checked';}?>> <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an INSIS Member)</span></td>
+                    <td><label for="chk_insis">&nbsp;InSIS Member</label>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="chk_insis" id="chk_insis" <?php if ($insis == 'Y'){echo 'checked';}?>> <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an InSIS Member)</span></td>
                     <td></td>
                   </tr>
                 </table>

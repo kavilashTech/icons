@@ -46,22 +46,23 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button"
               aria-expanded="false">Submission <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Submission Guidelines</a></li>
+              <li><a href="abstractguidelines.php">Abstract Guidelines</a></li>
               <li><a href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a></li>
               <li><a href="#">How to Submit Abstract</a></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button"
-              aria-expanded="false">Registration <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Registration information</a></li>
-              <li><a href="#">Registration FAQ</a></li>
-			  <?php
+          <?php
 				if (!isset($_SESSION['uid'])){ 
-				echo '<li><a href="signup.php">Sign Up</a></li>';
-				echo '<li><a href="#">Login</a></li>';
-			
+          echo '<li class="dropdown">';
+          echo '<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button"
+              aria-expanded="false">Registration <span class="caret"></span></a>';
+            echo '<ul class="dropdown-menu">';
+            echo '<li><a href="#">Registration information</a></li>';
+            echo '<li><a href="#">Registration FAQ</a></li>';
+    				echo '<li><a href="signup.php">Sign Up</a></li>';
+		    		echo '<li><a href="#">Login</a></li>';
+            echo '</ul>
+            </li>';
 				} else {
 					// echo '<li><a href="contactinformation.php">Contact Information</a></li>';
 					// echo '<li><a href="">Payment Information</a></li>';
@@ -71,8 +72,7 @@
                   <li class="dropdown-header">Nav header</li>
                   <li><a href="#">Separated link</a></li>
                   <li><a href="#">One more separated link</a></li> -->
-            </ul>
-          </li>
+
 
           <li><a href="contact.php">Contact</a></li>
             <?php

@@ -161,8 +161,8 @@ if (!isset($_REQUEST["txtFlag"])) {
 
 
 
-		$inssql = "INSERT into contact_table (au_firstname, au_lastname, au_affiliation, au_addlemailid, au_mobile, au_phone, au_nationality, au_iim, au_isnt, au_insis, ,au_sfa, au_student, user_table_ru_id, au_active) values
-													   ('$fname', '$lname', '$affi', '$ademail', '$mobile', '$phone', $nationality, '$iim', '$isnt', '$insis', ' $student ', " . $_SESSION['uid'] . ", 1)";
+		$inssql = "INSERT into contact_table (au_firstname, au_lastname, au_affiliation, au_addlemailid, au_mobile, au_phone, au_nationality, au_iim, au_isnt, au_insis ,au_sfa, au_student, user_table_ru_id, au_active) values
+													   ('$fname', '$lname', '$affi', '$ademail', '$mobile', '$phone', $nationality, '$iim', '$isnt', '$insis', '$sfa','$student', " . $_SESSION['uid'] . ", 1)";
 		// echo $inssql . "<BR>";
 		// 				echo $_REQUEST['sel_nationality'] . "<br>";
 		// 				echo $nationality;
