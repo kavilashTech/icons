@@ -1,6 +1,8 @@
 <?php 
 // session_start();
-include 'includes/header.php'; 
+    include 'includes/header.php'; 
+    include 'includes/menu.php'; 
+
 require('includes/connection.php');  // get db connection
 
 $errorMessage = '';

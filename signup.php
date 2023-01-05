@@ -2,7 +2,9 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-include 'includes/header.php'; ?>
+    include 'includes/header.php'; 
+    include 'includes/menu.php'; 
+?>
 
 <script type="text/javascript">
   function testFunction() {

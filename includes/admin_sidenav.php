@@ -8,6 +8,7 @@
     <a id="side_menu" href="#">Contact Information</a>
     <!-- <a id="side_menu" href="#">Payment Information</a> -->
     <a id="side_menu" href="#">Abstract Submission</a>
+    <a id="side_menu" href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a>
     <?php
     if ($_SESSION['category'] == 'A') {
     ?>

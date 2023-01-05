@@ -1,5 +1,9 @@
-<?php include 'includes/connection.php'; 
- include 'includes/header.php'; ?>
+<?php 
+include 'includes/connection.php'; 
+include 'includes/header.php'; 
+include 'includes/menu-loggedin.php'; 
+
+ ?>
 
 <?php
 if (!isset($_SESSION["uid"]))
