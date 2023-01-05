@@ -24,6 +24,7 @@
           <li>Do not mention abbreviations in a separate heading, mention them when they first arrive in the text. </li>
           <li>Abstract should not be more than 250 words. </li>
         </ul>
+        <p><b>Keywords:</b> About four key words or phrases in alphabetical order, separated by commas.</p>
       </div>
       <div class="col-md-1"></div>
     </div>

@@ -46,7 +46,7 @@
 								<p><a href="forgotpassword.php" style="color:#041554;"><b>Forgot Password?</b></a></p>
 							</div>
 							<div class="mar-right10 pull-right">
-								<p><b><a href="signup.php">Register Here.</a></b></p>
+								<p><b><a href="signup.php">Sign-up Here.</a></b></p>
 							</div>
 						</div>
 

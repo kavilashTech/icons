@@ -6,7 +6,7 @@
         ?></p>
     </div>
     <a id="side_menu" href="#">Contact Information</a>
-    <a id="side_menu" href="#">Payment Information</a>
+    <!-- <a id="side_menu" href="#">Payment Information</a> -->
     <a id="side_menu" href="#">Abstract Submission</a>
     <?php
     if ($_SESSION['category'] == 'A') {

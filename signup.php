@@ -23,15 +23,15 @@ include 'includes/header.php'; ?>
 <!-- content page -->
 
 <div class="section-header mar-bot30">
-  <h2 class="section-heading animated" data-animation="bounceInUp">ICONS 2023 - Registration</h2>
+  <h2 class="section-heading animated" data-animation="bounceInUp">ICONS 2023 - Sign Up</h2>
 </div>
 
 
 <div class="container">
-  <h3 style="text-align:center; color:red;">
+  <!-- <h3 style="text-align:center; color:red;">
     <br />
     Registration opens on January 01, 2023.<br /><br />
-  </h3>
+  </h3> -->
 
 
   <div class="container" style="max-width:420px">
@@ -65,7 +65,8 @@ include 'includes/header.php'; ?>
               </div>
             </div>
 
-            <p class="form-group small text-center">By creating an account, you are agreeing to our <a href="">Terms of Use</a> and our <a href="">Privacy Policy</a>.</p>
+            <p class="form-group small text-center">By creating an account, you are agreeing to abide by the conference rules.</p>
+            <!-- <p class="form-group small text-center">By creating an account, you are agreeing to our <a href="">Terms of Use</a> and our <a href="">Privacy Policy</a>.</p> -->
             <hr>
             <p class="form-group small text-center">Already have an account? <a href="login.php">Login</a></p>
             <p class="form-group small text-center">Forgot your password? <a href="forgotpassword.php">Forgot Password</a></p>
@@ -97,7 +98,7 @@ if (isset($_POST['ru_email'])) {
 
   if (mysqli_num_rows($result) > 0) {
     //User email exists. Show error message.
-    echo '<script>document.getElementById("error").innerHTML = "Email ID is already registered. Please Login or use Forgot Password.";</script>';
+    echo '<script>document.getElementById("error").innerHTML = "Email ID is already Signed up. Please Login or use Forgot Password.";</script>';
   } else {
     // User does not exist. Create new record.
     $ru_reg = "INSERT into user_table (ru_userid,ru_password,ru_verify_status,ru_category,ru_active) VALUES ('$ru_email',md5('$ru_password'),0,'U',0)";

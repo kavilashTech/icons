@@ -36,7 +36,7 @@
               <li><a href="index.php#mark-about">About Conference</a></li>
               <li><a href="scope.php">Conference Objectives</a></li>
               <li><a href="organizers.php">Organizers</a></li>
-              <li><a href="#">Committees</a></li>
+              <!-- <li><a href="#">Committees</a></li> -->
               <li><a href="importantdates.php">Important Dates</a></li>
               <li><a href="venue.php">Venue</a></li>
             </ul>
@@ -51,16 +51,25 @@
               <li><a href="#">How to Submit Abstract</a></li>
             </ul>
           </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button"
+              aria-expanded="false">Registration <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <!-- <li><a href="registrationguidelines.php">Registration Guidelines</a></li> -->
+              <li><a href="registrationfees.php">Registration Fees</a></li>
+            </ul>
+          </li>
+
           <?php
-				if (!isset($_SESSION['uid'])){ 
+				if (!isset($_SESSION['uid'])){  // if not signed in
           echo '<li class="dropdown">';
           echo '<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button"
-              aria-expanded="false">Registration <span class="caret"></span></a>';
+              aria-expanded="false">Signup <span class="caret"></span></a>';
             echo '<ul class="dropdown-menu">';
-            echo '<li><a href="#">Registration information</a></li>';
-            echo '<li><a href="#">Registration FAQ</a></li>';
-    				echo '<li><a href="signup.php">Sign Up</a></li>';
-		    		echo '<li><a href="#">Login</a></li>';
+            echo '<li><a href="#">Signup information</a></li>';
+            // echo '<li><a href="#">Signup FAQ</a></li>';
+    				echo '<li><a href="Signup.php">Sign Up</a></li>';
+		    		echo '<li><a href="login.php">Login</a></li>';
             echo '</ul>
             </li>';
 				} else {
