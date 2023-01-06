@@ -368,7 +368,7 @@ if (!isset($_REQUEST["txtFlag"])) {
 
 <?php include 'includes/admin_sidenav.php'; ?>
 
-
+<!-- Header area start -->
 <div class="section-header mar-bot30">
 	<h2 class="section-heading animated" data-animation="bounceInUp">Contact Information</h2>
 </div>
@@ -377,6 +377,7 @@ if (!isset($_REQUEST["txtFlag"])) {
 	<h5 id="success" class="pull-right" style="color:green;"></h5>
 	<h5 id="error" class="pull-right" style="color:red;"></h5>
 </div>
+<!-- Header area end -->
 
 <!-- Main content Block -->
 <div class="container" id="main">
@@ -619,7 +620,6 @@ if (!isset($_REQUEST["txtFlag"])) {
 	?>
 
 	<!-- </div> -->
-</div>
 </div>
 
 

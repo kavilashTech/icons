@@ -32,13 +32,4 @@ $phpemail->Password = 'ftkqhlddckmalage';         // SMTP password
 $phpemail->SMTPSecure = 'TLS';                  // Enable TLS encryption, `ssl` also accepted 
 $phpemail->Port = 587;                          // TCP port to connect to 
 
-//  MAIL_DRIVER="smtp"
-// MAIL_HOST="smtp.gmail.com"
-// MAIL_PORT="465"
-// MAIL_USERNAME="sampathraj.mp@gmail.com"
-// MAIL_PASSWORD="ftkqhlddckmalage"
-// MAIL_ENCRYPTION="SSL"
-// MAIL_FROM_ADDRESS="sampathraj.mp@gmail.com"
-// MAIL_FROM_NAME="no-reply"
- 
  ?>
