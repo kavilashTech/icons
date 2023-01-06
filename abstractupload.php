@@ -529,7 +529,7 @@ if (isset($_POST['txtSubmit'])) {
 
       // echo $variables['imgpath'];
 
-      $template = file_get_contents("abstractTemplate.html");
+      $template = file_get_contents("templates/abstractTemplate.html");
 
       foreach ($variables as $key => $value) {
         $template = str_replace('{{ ' . $key . ' }}', $value, $template);
