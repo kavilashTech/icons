@@ -187,7 +187,7 @@ if (isset($_POST['txtSubmit'])) {
       $sql = "SELECT a.*, b.* FROM submission a, topics b where a.su_topic1=b.to_id and a.user_table_ru_id=$userid";
 
       $result = mysqli_query($connection, $sql);
-
+if ($result){
       if (mysqli_num_rows($result) > 0) {
         //Change Submit Button Text if record exists;
         $submitBtnText = "Add Abstract";
@@ -222,7 +222,9 @@ if (isset($_POST['txtSubmit'])) {
         echo '<script>document.getElementById("message").innerHTML = "";</script>';
         // No data found
         echo '<tr><td colspan="5" align="center">No Abstracts Submitted yet!</td></tr>';
-      } ?>
+      } 
+    }
+      ?>
 
       <!-- end 13-04-2017-->
     </table>
