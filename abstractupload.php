@@ -223,6 +223,8 @@ if ($result){
         // No data found
         echo '<tr><td colspan="5" align="center">No Abstracts Submitted yet!</td></tr>';
       } 
+    } else {
+      echo '<script>document.getElementById("message").innerHTML = "No Data found";</script>';
     }
       ?>
 
@@ -531,7 +533,7 @@ if ($result){
 
       // echo $variables['imgpath'];
 
-      $template = file_get_contents("abstractTemplate.html");
+      // $template = file_get_contents("abstractTemplate.html");
 
       foreach ($variables as $key => $value) {
         $template = str_replace('{{ ' . $key . ' }}', $value, $template);
