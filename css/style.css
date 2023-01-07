@@ -121,6 +121,49 @@ color:red;
   margin-left:25px;
 }
 
+/* table reports */
+
+.tbl-reports{
+border: 1px solid #848485;
+}
+.tbl-reports th, td {
+border: 1px solid #848485;
+text-align: left;
+padding-left: 5px;
+padding-right: 5px;
+font-size: 14px;
+line-height: 18px;
+white-space: nowrap;
+}
+.tbl-reports th{
+background-color: #5c5c5c;
+color:#ffffff;
+/* font-size: 14px; */
+}
+.tbl-reports tr:hover{
+background-color: #414141;
+color:#fff;
+}
+
+/* Export button */
+.btn-export {
+  background-color: #0f581f;
+  color:#fff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  /* margin-left: 20px; */
+}
+
+.btn-export:hover {
+  background-color: #ffffff;
+  color:#0f581f;
+  border: #0f581f solid 1px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+}
+
 /*----TEMP END ---------------------------- */
 
 
