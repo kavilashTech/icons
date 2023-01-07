@@ -370,7 +370,7 @@ if (isset($_POST['txtSubmit'])) {
       $variables['icId'] = $_SESSION['icid'];
       $variables['icTitle'] = $abname;
       $variables['icFilename'] = $fileName;
-      $variables['icUserEmail'] = $userEmail;
+      $variables['icUserEmail'] = $primaryEmail;
 
 
       // echo $variables['imgpath'];
