@@ -279,7 +279,7 @@ if (isset($_POST['txtSubmit'])) {
           $uploadPath = "uploads/" . $newFileName;
           //chmod("uploads/".$newFileName, 0777);
 
-          //function for upload file
+          //function for upload file into server
           if (move_uploaded_file($fileTmpName, $uploadPath)) {
             echo '<script>document.getElementById("message").innerHTML = "Successfully uploaded";</script>';
           } else {
@@ -336,7 +336,7 @@ if (isset($_POST['txtSubmit'])) {
 */
       //EMSI ID $_SESSION['emsiid']
       //EMSI RU ID  $_SESSION['uid']
-      /*Mail trigger for abstract submission start */
+      /* EMAIL sent to Admin - Mail trigger for abstract submission start */
 
       //$emsql = "SELECT * FROM contact_table where user_table_ru_id = ".$_SESSION['uid'];
       $emsql = "SELECT a.au_addlemailid as addlemail, a.au_mobile, b.ru_userid FROM contact_table a, user_table b ";
@@ -361,126 +361,41 @@ if (isset($_POST['txtSubmit'])) {
       //echo "<br>" . $userEmail;
       //	  exit(0);
 
+      // ------- variables 
+
+
+      $variables = array();
+
+      $variables['imgpath'] = SITE_URL;
+      $variables['icId'] = $_SESSION['icid'];
+      $variables['icTitle'] = $abname;
+      $variables['icFilename'] = $fileName;
+      $variables['icUserEmail'] = $userEmail;
+
+
+      // echo $variables['imgpath'];
+
+      $template = file_get_contents("templates/abstractTemplate.html");
+
+      foreach ($variables as $key => $value) {
+        $template = str_replace('{{ ' . $key . ' }}', $value, $template);
+      }
+      $email_txt = $template;
+
+// echo $email_txt;
+// exit(0);
+      // --------variables end
+    
+
       $email_to = ADMIN_EMAIL; // The email you are sending to (example)
       //$email_to = $emrow["au_emailid"];
       $email_from = "icons@igcar.gov.in"; // The email you are sending from (example)
       $email_subject = "ICONS 2023 Conference - New Abstract - " . $_SESSION['icid']; // The Subject of the email
       //$email_txt = "text body of message"; // Message that the email has in it
 
-      $email_txt = '
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-      <!-- Required meta tags always come first -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>ICNIB 2019</title>
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-      <style media="screen">
-      #header{
-        background-image: url(img/subhead.png);
-        background-size: cover;
-      }
-      #header p{
-        font-size: 25px;
-        color:white;
-        text-align: center;
-        padding-top: 20px;
-      }
-      .footer{
-        background-color:#000033;
-        color:#fff;
-        text-align: center;
-        margin: 0px;
-        padding: 0px;
-      }
-      #mail p{
+      
 
-      }
-      #mail h5{
-
-      }
-      .container{
-        margin-left: 50px;
-        margin-right: 20px;
-
-      }
-      body{
-        margin:25px;
-      }
-      </style>
-      </head>
-
-      <body>
-	  
-  <div class="container" style="padding-left:20%;padding-right:20%">
-   <!-- Header image - START -->
-    <div class="container" id="header" style=" ">
-      <div class="row">
-        <div class="col-xs-2">
-          <p>&nbsp;</p>
-        </div>
-        <div class="col-xs-8">
-          <img src="' . SITE_URL . 'img/emailheadimg1.jpg" alt="" class="img-resposnive center-block" width="600px">
-        </div>
-        <div class="col-xs-2">
-          <p>&nbsp;</p>
-        </div>
-      </div>
-    </div>
-   <!-- Header image - END -->
-	  
-	  
-      <div class="container" id="mail" style="">
-      <!-- <p style="font-size:24px;color:#000;text-align:center"><b>New Abstract has been submitted.</b></p> -->
-      <br/>
-
-      <p>The details of the user who triggered this email is given below</p>
-      </div>
-      <br/>
-
-      <div class="row">
-      <div class="col-sm-2">
-
-      </div>
-      <div class="col-sm-8">
-
-      <p><b>Abstract Submission Details</b></p>
-      <table class="table table-bordered">
-      <tr>
-      <th width="50%">ICONS 2023 ID</th>
-      <td>' . $_SESSION['icid'] . '</td>
-      </tr>
-      <tr>
-      <th>E-Mail</th>
-      <td>' . $primaryEmail . '</td>
-      </tr>
-      <tr>
-      <th>Phone</th>
-      <td>' . $emrow["au_mobile"] . '</td>
-      </tr>
-      </table>
-      </div>
-      </div>
-
-      <p style="font-size:15px">Best regards,</p>
-      <p style="font-size:15px">ICONS 2023 Web Team</p>
-
-      </div>
-      <div class="container footer">
-      <p class="footer">Copyrights ICONS 2023 (2022-23). All rights reserved.</p> </div> </div>
-
-
-      <!-- jQuery first, then Bootstrap JS. --> <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"> </script> </body>
-
-      </html>
-      ';
-
-      //$$$ to check
+      // ------------ Attach file to email
       $fileatt = "uploads/" . $newFileName; // Path to the file (example)
       	  // echo $fileatt . "<BR>";
       	  // exit(0);
@@ -490,6 +405,7 @@ if (isset($_POST['txtSubmit'])) {
       $file = fopen($fileatt, 'rb');
       $data = fread($file, filesize($fileatt));
       fclose($file);
+
       $semi_rand = md5(time());
       $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
       $headers = "From: $email_from"; // Who the email is from (example)
@@ -515,7 +431,8 @@ if (isset($_POST['txtSubmit'])) {
 
 
       // Email to be sent to User
-      //$email_to = ADMIN_EMAIL; // The email you are sending to (example)
+      //==========================
+
       // Check whether sign in email and Contact Email are same. If not send mail to both email ids.
 
       // Variables : icId, icTitle, icFilename, imgpath
