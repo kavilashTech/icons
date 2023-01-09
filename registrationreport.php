@@ -51,10 +51,10 @@ if (!isset($_SESSION["uid"])) {
                //$expsql = "SELECT u.emsi_id as EMSIID, emauth.au_firstname as FirstName, emauth.au_lastname as LastName, emauth.au_affiliation as Affiliation, (select GROUP_CONCAT(s.su_abstracttitle SEPARATOR ' (o). ') from emsi_submission as s where s.emsi_user_table_ru_id = u.ru_id ) as Abstracts FROM emsi_author_table as emauth, emsi_user_table as u  where  emauth.au_author_type = 'P' and emauth.emsi_user_table_ru_id = u.ru_id";
 
 
-               $expsql = "SELECT B.id as 'id', A.au_firstname as Firstname, A.au_lastname as Lastname, B.ru_userid as Email, A.au_addlemailid as 'Additional Email', A.au_phone as Phone, A.au_mobile as Mobile, REPLACE(A.au_affiliation, ',',' ') as Affiliation, C.na_name as Nationality 
+               $expsql = "SELECT B.ic_id as 'id', A.au_firstname as Firstname, A.au_lastname as Lastname, B.ru_userid as Email, A.au_addlemailid as 'Additional Email', A.au_phone as Phone, A.au_mobile as Mobile, REPLACE(A.au_affiliation, ',',' ') as Affiliation, C.na_name as Nationality 
 				 FROM contact_table A, user_table B, nationality C 
 				 WHERE A.user_table_ru_id = B.ru_id 
-				 AND A.au_nationality = C.na_id AND A.au_active = 1 order by B.id";
+				 AND A.au_nationality = C.na_id AND A.au_active = 1 order by B.ic_id";
 
 
                // echo $expsql;
@@ -104,9 +104,9 @@ if (!isset($_SESSION["uid"])) {
 
             if (!isset($_REQUEST["subexport"])) {
             ?>
-               <!-- <form name="export" method="post" action="registrationreport.php">
-                  <button type="submit" class="form-control btn btn-export" value="Export To Excel" name="subexport">Export to Excel&nbsp;&nbsp;</button>
-               </form> -->
+               <form name="export" method="post" action="registrationreport.php">
+                  <button type="submit" class="form-control btn btn-export" value="Export To Excel" name="subexport">Export to Excel</button>
+               </form>
             <?php } ?>
          </div>
       </div>

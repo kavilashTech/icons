@@ -17,7 +17,7 @@
         <a id="side_menu" href="userstatus.php">User Status</a>
         <a id="side_menu" href="registrationreport.php">Registration Report</a>
         <!-- <a id="side_menu" href="#">Payment Report</a> -->
-        <!-- <a id="side_menu" href="#">Manuscript Report</a> -->
+        <a id="side_menu" href="abstractreport.php">Submission Report</a>
     <?php } ?>
 <hr>
     <div class="help_note"><a href="#">Help</a></div>

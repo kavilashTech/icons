@@ -489,15 +489,15 @@
           </div>
 
           <div class="col-sm-3 align-center">
-            <div class="collaboration-img"><img alt="ISNT" src="img/logo/isnt.png" width="100px"></div>
+            <div class="collaboration-img"><img alt="ISNT" src="img/logo/isnt.png" width="85px"></div>
           </div>
 
           <div class="col-sm-3 align-center">
-            <div class="collaboration-img"><img alt="IIM" src="img/logo/iim.jpg" width="100px"></div>
+            <div class="collaboration-img"><img alt="IIM" src="img/logo/iim.jpg" width="135px"></div>
           </div>
 
           <div class="col-sm-3 align-center">
-            <div class="collaboration-img"><img alt="InSIS" src="img/logo/insis.png" width="100px"></div>
+            <div class="collaboration-img"><img alt="InSIS" src="img/logo/insis.png" width="135px"></div>
           </div>
 
           <!-- <div class="col-sm-2 align-center">
