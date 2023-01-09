@@ -43,12 +43,7 @@ if (!isset($_SESSION["uid"])) {
                if (isset($_REQUEST["subexport"])) {
                   //$filename = "tmpcsv/".strtotime("now").'.csv';
                   //echo $t = date_format(time(), "%d/%m/%Y");
-                  $filename = "tmpcsv/ManuscriptReport.csv";
-
-                  //  $expsql = "SELECT B.cf8_id as 'Cf8-id', A.au_firstname as Firstname, A.au_lastname as Lastname, B.ru_userid as Email, A.au_addlemailid as 'Additional Email', A.au_phone as Phone, A.au_mobile as Mobile, REPLACE(A.au_affiliation, ',',' ') as Affiliation, C.na_name as Nationality, A.au_iim as 'IIM Member' 
-                  //  FROM cf8_contact_table A, cf8_user_table B, cf8_nationality C 
-                  //  WHERE A.cf8_user_table_ru_id = B.ru_id 
-                  //  AND A.au_nationality = C.na_id AND A.au_active = 1 order by B.cf8_id";
+                  $filename = "tmpcsv/SubmissionReport.csv";
 
                   $expsql = "SELECT b.ic_id as 'IC ID', c.au_firstname as 'First Name', 
             c.au_lastname as 'Last Name', a.su_abstract_path as Filename, 
@@ -210,4 +205,4 @@ if (!isset($_SESSION["uid"])) {
 <!-- footer -->
 <!-- <?php // include 'includes/footer_loggedin.php'; 
       ?> -->
-      <?php include 'includes/script.php'; ?>
+<?php include 'includes/script.php'; ?>
