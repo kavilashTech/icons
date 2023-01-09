@@ -7,7 +7,7 @@
     </div>
     <a id="side_menu" href="contactinformation.php">Contact Information</a>
     <!-- <a id="side_menu" href="#">Payment Information</a> -->
-    <a id="side_menu" href="abstractupload.php">Abstract Submission</a>
+    <a id="side_menu" href="abstractupload.php">Submit Abstract</a>
     <a id="side_menu" href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a>
     <?php
     if ($_SESSION['category'] == 'A') {

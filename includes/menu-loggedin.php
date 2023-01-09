@@ -27,7 +27,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" style="margin-top:10px;">
-          <li class="active"><a href="contactinformation.php">Home</a></li>
+          <!-- <li class="active"><a href="contactinformation.php">Home</a></li> -->
           <!-- <li><a href="#section-contact">Conference</a></li> -->
           <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button"
