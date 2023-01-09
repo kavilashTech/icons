@@ -41,8 +41,7 @@ if (!isset($_SESSION["uid"])) {
 
                //Export Starts
                if (isset($_REQUEST["subexport"])) {
-                  //$filename = "tmpcsv/".strtotime("now").'.csv';
-                  //echo $t = date_format(time(), "%d/%m/%Y");
+
                   $filename = "tmpcsv/SubmissionReport.csv";
 
                   $expsql = "SELECT b.ic_id as 'IC ID', c.au_firstname as 'First Name', 
@@ -112,18 +111,6 @@ if (!isset($_SESSION["uid"])) {
       <div class="container-fluid">
 
          <?php
-
-         // $sql = "SELECT B.cf8_id as cf8id, A.au_firstname, A.au_lastname, B.ru_userid as userid, A.au_addlemailid, A.au_phone, A.au_mobile as mobile, A.au_affiliation as affiliation, C.na_name as nationality, A.au_iim as iim
-         // FROM cf8_contact_table A, cf8_user_table B, cf8_nationality C 
-         // WHERE A.cf8_user_table_ru_id = B.ru_id
-         // 	AND A.au_nationality = C.na_id
-         // 	AND  A.au_active = 1 order by B.cf8_id";
-
-         // $sql = "SELECT a.su_id, a.su_abstracttitle as TITLE, SUBSTR(a.su_abstract_path,15) as Filename, b.ru_id, b.cf8_id as USERID
-         // FROM cf8_submission a, cf8_user_table b
-         // WHERE a.cf8_user_table_ru_id = b.ru_id
-         //   AND a.su_id = (select max(a.su_id) from cf8_submission)";
-
 
          //----------------------------------- Paging Start ----------------------------
 
