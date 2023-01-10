@@ -68,7 +68,7 @@
             echo '<ul class="dropdown-menu">';
             echo '<li><a href="#">Signup information</a></li>';
             // echo '<li><a href="#">Signup FAQ</a></li>';
-    				echo '<li><a href="Signup.php">Sign Up</a></li>';
+    				echo '<li><a href="signup.php">Sign Up</a></li>';
 		    		echo '<li><a href="login.php">Login</a></li>';
             echo '</ul>
             </li>';
