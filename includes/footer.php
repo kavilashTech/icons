@@ -31,18 +31,18 @@
         <div class="col-lg-3 col-xs-12 links">
           <h4 class="mt-lg-0 mt-sm-3">Quick Links</h4>
           <ul class="m-0 p-0">
-            <li>- <a href="#">Home</a></li>
-            <li>- <a href="#">Conference Objective</a></li>
-            <li>- <a href="#">Important Dates</a></li>
-            <li>- <a href="#">Contact</a></li>
-            <li>- <a href="#">Login</a></li>
+            <li>- <a href="index.php">Home</a></li>
+            <li>- <a href="scope.php">Conference Objective</a></li>
+            <li>- <a href="importantdates.php">Important Dates</a></li>
+            <li>- <a href="signup.php">Register</a></li>
+            <li>- <a href="login.php">Login</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-xs-12 location">
           <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-          <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-          <p class="mar-bot0"><i class="fa fa-phone mar-right20"></i>(541) 754-3010</p>
-          <p><i class="fa fa-envelope-o mar-right20"></i>info@hsdf.com</p>
+          <p>Indira Gandhi Centre for Atomic Research,<br>Kalpakkam - 603 102, INDIA</p>
+          <p class="mar-bot0"><i class="fa fa-phone mar-right20"></i>+91 44 2748 0500</p>
+          <p><i class="fa fa-envelope-o mar-right20"></i>icons@igcar.gov.in</p>
         </div>
       </div>
       <div class="row copyright mar-top20">
@@ -57,7 +57,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Vlava
             -->
-            <p class="text-white-50">Powered by <a class="trademark" href="https://www.kavilashtechnologies.in">Kavilashtechnologies.in</a></p>
+            <p class="text-white-50">Powered by <a class="trademark" href="https://www.kavilashtechnologies.in" target="_blank">Kavilashtechnologies.in</a></p>
           </div>
         </div>
       </div>

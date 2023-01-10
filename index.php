@@ -1,6 +1,6 @@
-<?php 
-    include 'includes/header.php'; 
-    include 'includes/menu.php'; 
+<?php
+include 'includes/header.php';
+include 'includes/menu.php';
 ?>
 
 
@@ -59,19 +59,38 @@
             </ol> -->
       <div class="carousel-inner" role="listbox">
         <!-- NOTE: Bootstrap v4 changes class name to carousel-item -->
-        <div class="item">
-          <div id="intro" style="background-image: url('./img/slide1.JPG');">
+        <div class="item active">
+          <div id="intro" style="background-image: url('./img/slide-5.jpg');">
             <div class="intro-content">
               <div class="row slider-row">
 
                 <div class="col-md-10 slider-box">
                   <!-- <div> -->
                   <h1>ICONS <span>2023</span></h1>
-                    <h2>3rd International Conference on Structural Integrity</h2>
-                    <h2>23 - 25 August, 2023</h2>
-                    <div>
-                      <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
-                    </div>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slide-1.JPG');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10 slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
                   <!-- </div> -->
                 </div>
               </div>
@@ -85,18 +104,18 @@
                 <div class="col-md-10">
                   <!-- <div> -->
                   <h1>ICONS <span>2023</span></h1>
-                    <h2>3rd International Conference on Structural Integrity</h2>
-                    <h2>23 - 25 August, 2023</h2>
-                    <div>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
                     <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
-                    </div>
+                  </div>
                   <!-- </div> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="item active">
+        <div class="item">
           <div id="intro" style="background-image: url('./img/slide-3.jpg');">
             <div class="intro-content">
               <div class="row slider-row">
@@ -104,11 +123,11 @@
                 <div class="col-md-10">
                   <!-- <div> -->
                   <h1>ICONS <span>2023</span></h1>
-                    <h2>3rd International Conference on Structural Integrity</h2>
-                    <h2>23 - 25 August, 2023</h2>
-                    <div>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
                     <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
-                    </div>
+                  </div>
                   <!-- </div> -->
                 </div>
               </div>
@@ -122,12 +141,12 @@
 
                 <div class="col-md-10">
                   <!-- <div> -->
-                    <h1>ICONS <span>2023</span></h1>
-                    <h2>3rd International Conference on Structural Integrity</h2>
-                    <h2>23 - 25 August, 2023</h2>
-                    <div>
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
                     <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
-                    </div>
+                  </div>
                   <!-- </div> -->
                 </div>
               </div>
@@ -153,79 +172,87 @@
   <div class="container">
 
     <div class="row mar-bot40">
-      <div class="col-lg-4">
-        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-          <div class="float-left mar-right20">
-            <a href="#" class="hi-icon hi-icon-screen">screen</a>
-          </div>
-        </div>
-        <h3 class="text-bold">Registration</h3>
-        <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
 
-        <div class="clear"></div>
-      </div>
 
       <div class="col-lg-4">
         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
           <div class="float-left mar-right20">
-            <a href="#" class="hi-icon hi-icon-clock">location</a>
-          </div>
-        </div>
-        <h3 class="text-bold">Schedule</h3>
-        <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
-        <div class="clear"></div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-          <div class="float-left mar-right20">
-            <a href="#" class="hi-icon hi-icon-images">images</a>
-          </div>
-        </div>
-        <h3 class="text-bold">Topics</h3>
-        <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
-        <div class="clear"></div>
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-          <div class="float-left mar-right20">
-            <a href="#" class="hi-icon hi-icon-archive">archive</a>
-          </div>
-        </div>
-        <h3 class="text-bold">Submissions</h3>
-        <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
-        <div class="clear"></div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-          <div class="float-left mar-right20">
-            <a href="#" class="hi-icon hi-icon-contract">Mobile</a>
-          </div>
-        </div>
-        <h3 class="text-bold">Connect</h3>
-        <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
-        <div class="clear"></div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
-          <div class="float-left mar-right20">
-            <a href="#" class="hi-icon hi-icon-location">Faster</a>
+            <a href="venue.php" class="hi-icon hi-icon-location">Faster</a>
           </div>
         </div>
         <h3 class="text-bold">Venue</h3>
-        <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+        <p>ICONS-2023 will be held offline at the UNESCO world heritage site- Mamallapuram in India.</p>
 
         <div class="clear"></div>
       </div>
+
+      <div class="col-lg-4">
+        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+          <div class="float-left mar-right20">
+            <a href="scope.php" class="hi-icon hi-icon-images">images</a>
+          </div>
+        </div>
+        <h3 class="text-bold">Objectives</h3>
+        <p>ICONS-2023 will cater to all topics in the domain of structural integrity. Broad themes here.</p>
+
+        <div class="clear"></div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+          <div class="float-left mar-right20">
+            <a href="abstractguidelines.php" class="hi-icon hi-icon-archive">archive</a>
+          </div>
+        </div>
+        <h3 class="text-bold">Submissions</h3>
+        <p>Abstract submissions now open!</p>
+
+        <div class="clear"></div>
+      </div>
+
+
+
+
+
+    </div>
+    <div class="row">
+    <div class="col-lg-4">
+        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+          <div class="float-left mar-right20">
+            <a href="#" onclick="return false" class="hi-icon hi-icon-screen">screen</a>
+          </div>
+        </div>
+        <h3 class="text-bold">Workshops</h3>
+        <p>Stay tuned for updates on workshops addressing key aspects of structural integrity.</p>
+
+        <div class="clear"></div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+          <div class="float-left mar-right20">
+            <a href="#" onclick="return false"  class="hi-icon hi-icon-clock">location</a>
+          </div>
+        </div>
+        <h3 class="text-bold">Schedule</h3>
+        <p>Stay tuned for schedule updates</p>
+
+        <div class="clear"></div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
+          <div class="float-left mar-right20">
+            <a href="contact.php" class="hi-icon hi-icon-contract">Mobile</a>
+          </div>
+        </div>
+        <h3 class="text-bold">Connect</h3>
+        <p>Contact us for any required information.</p>
+
+        <div class="clear"></div>
+      </div>
+
+
 
     </div>
   </div>
@@ -248,7 +275,7 @@
           <h3>Conference Policy on Presentations</h3>
           <p style="font-size:17px;" class="align-left">At least one author of the paper is expected to register and participate in person to present the paper.</p>
           <p style="font-size:17px;" class="align-left">A maximum of two presentations will be permitted for a registered delegate.</p>
-          
+
         </div>
       </div>
     </div>
