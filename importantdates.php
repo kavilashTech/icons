@@ -18,34 +18,34 @@
             <table class="table table-striped table-bordered">
               <thead>
                 <tr class="purple-row">
-                  <th>Date</th>
                   <th></th>
+                  <th>Date</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>15 October 2021</td>
-                  <td>First Circular</td>
+                  <td>Deadline for abstract submission</td>
+                  <td>28th February, 2023</td>
                 </tr>
                 <tr>
-                  <td>30 October 2021</td>
-                  <td>Registration Open</td>
+                  <td>Acceptance notification</td>
+                  <td>31st March, 2023</td>
                 </tr>
                 <tr>
-                  <td>1 November 2021</td>
-                  <td>Manuscript Submission Open</td>
+                  <td>Submission of manuscript</td>
+                  <td>30th May, 2023</td>
                 </tr>
                 <tr>
-                  <td>31 December 2021</td>
-                  <td>Manuscript Submission Closing</td>
+                  <td>Communication of review outcome of manuscript</td>
+                  <td>15th June, 2023</td>
                 </tr>
                 <tr>
-                  <td>15 January 2022</td>
-                  <td>Intimation of Acceptance</td>
+                  <td>Submission of revised camera-ready manuscripts</td>
+                  <td>15th July, 2023</td>
                 </tr>
                 <tr>
-                  <td>8-10 February 2022</td>
-                  <td>Conference Dates</td>
+                  <td>Conference dates</td>
+                  <td>23 - 25 August, 2023</td>
                 </tr>
               </tbody>
             </table>
