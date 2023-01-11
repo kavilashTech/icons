@@ -34,7 +34,7 @@
             <li>- <a href="index.php">Home</a></li>
             <li>- <a href="scope.php">Conference Objective</a></li>
             <li>- <a href="importantdates.php">Important Dates</a></li>
-            <li>- <a href="signup.php">Register</a></li>
+            <li>- <a href="signup.php">Sign-up</a></li>
             <li>- <a href="login.php">Login</a></li>
           </ul>
         </div>

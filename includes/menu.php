@@ -48,7 +48,7 @@
             <ul class="dropdown-menu">
               <li><a href="abstractguidelines.php">Abstract Guidelines</a></li>
               <li><a href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a></li>
-              <li><a href="#">How to Submit Abstract</a></li>
+              <li><a href="howtosubmit.php">How to Submit Abstract</a></li>
             </ul>
           </li>
           <li class="dropdown">
