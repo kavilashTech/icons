@@ -221,8 +221,8 @@ if (isset($_POST['txtSubmit'])) {
         echo '<script>document.getElementById("message").innerHTML = "";</script>';
         // No data found
         echo '<tr><td colspan="5" align="center">No Abstracts Submitted yet!</td></tr>';
-      } 
-  ?>
+      }
+      ?>
 
       <!-- end 13-04-2017-->
     </table>
@@ -250,8 +250,8 @@ if (isset($_POST['txtSubmit'])) {
           $userid = $_SESSION["uid"];
           // get count
           $sql = "SELECT * FROM submission where user_table_ru_id='$userid'";
-          		  // echo $sql;
-          		  // exit(0);
+          // echo $sql;
+          // exit(0);
           $result = mysqli_query($connection, $sql);
           $rowcount = mysqli_num_rows($result);
           $ccount = $rowcount + 1;
@@ -314,35 +314,20 @@ if (isset($_POST['txtSubmit'])) {
         $chk_stud  = "N";
       }
 
-      // end 18-05-2017
 
-      // modefied by prakash on 12-04-2017
 
       $query = "INSERT into submission (user_table_ru_id, su_abstract_path, su_abstracttitle,su_created_on, su_topic1, su_student ) VALUES ('$userid','$newFileName','$abname',now(),'$tp_select1','$chk_stud')";
-// echo $query;
-// exit(0);
+      // echo $query;
+      // exit(0);
       $result = mysqli_query($connection, $query);
-      /*      if ($result == true) {
-        $last_id = mysqli_insert_id($connection);
 
-        $sql = "UPDATE emsi_files SET emsi_submission_su_id=".$last_id." WHERE user_table_ru_id = ".$_SESSION['uid']." and emsi_submission_su_id IS NULL";
-        //exit(0);
-        if (mysqli_query($connection, $sql)) {
-          echo "";
-        } else {
+      // --------------------------- Email Preparation
+      /* EMAIL sent to Admin - Mail trigger for abstract submission -- start */
 
-        }
-      }
-*/
-      //EMSI ID $_SESSION['emsiid']
-      //EMSI RU ID  $_SESSION['uid']
-      /* EMAIL sent to Admin - Mail trigger for abstract submission start */
-
-      //$emsql = "SELECT * FROM contact_table where user_table_ru_id = ".$_SESSION['uid'];
       $emsql = "SELECT a.au_addlemailid as addlemail, a.au_mobile, b.ru_userid FROM contact_table a, user_table b ";
       $emsql .= "WHERE a.user_table_ru_id = b.ru_id and a.user_table_ru_id = " . $_SESSION['uid'];
-//       echo $emsql  . "<br>";
-// exit(0);
+      // echo $emsql  . "<br>";
+      // exit(0);
 
       $emres = mysqli_query($connection, $emsql);
       $emrow = $emres->fetch_assoc();
@@ -351,7 +336,8 @@ if (isset($_POST['txtSubmit'])) {
         $userEmail = $primaryEmail;
         //echo "Matching emails ";
       } else {
-        $userEmail = $primaryEmail . ", " . $emrow["addlemail"];
+        $userEmail = $primaryEmail;
+        $userEmail2 = $emrow["addlemail"];
         //echo "NOT Matching emails ";
       }
 
@@ -363,7 +349,6 @@ if (isset($_POST['txtSubmit'])) {
 
       // ------- variables 
 
-
       $variables = array();
 
       $variables['imgpath'] = SITE_URL;
@@ -372,70 +357,42 @@ if (isset($_POST['txtSubmit'])) {
       $variables['icFilename'] = $fileName;
       $variables['icUserEmail'] = $primaryEmail;
 
-
-      // echo $variables['imgpath'];
-
       $template = file_get_contents("templates/adminabstractTemplate.html");
 
       foreach ($variables as $key => $value) {
         $template = str_replace('{{ ' . $key . ' }}', $value, $template);
       }
-      $email_txt = $template;
+      $email_body = $template;
 
-// echo $email_txt;
-// exit(0);
-      // --------variables end
-    
-
-      $email_to = ADMIN_EMAIL; // The email you are sending to (example)
-      //$email_to = $emrow["au_emailid"];
-      $email_from = "icons@igcar.gov.in"; // The email you are sending from (example)
-      $email_subject = "ICONS 2023 Conference - New Abstract - " . $_SESSION['icid']; // The Subject of the email
-      //$email_txt = "text body of message"; // Message that the email has in it
-
-      
-
-      // ------------ Attach file to email
-      $fileatt = "uploads/" . $newFileName; // Path to the file (example)
-      	  // echo $fileatt . "<BR>";
-      	  // exit(0);
-      //$fileatt = "/public_html/emsidemo/uploads/".$newFileName; // Path to the file (example)
-      $fileatt_type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"; // File Type
-      $fileatt_name = $newFileName; // Filename that will be used for the file as the attachment
-      $file = fopen($fileatt, 'rb');
-      $data = fread($file, filesize($fileatt));
-      fclose($file);
-
-      $semi_rand = md5(time());
-      $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-      $headers = "From: $email_from"; // Who the email is from (example)
-      $headers .= "\nMIME-Version: 1.0\n" .
-        "Content-Type: multipart/mixed;\n" .
-        " boundary=\"{$mime_boundary}\"";
-      $email_message = "This is a multi-part message in MIME format.\n\n" .
-        "--{$mime_boundary}\n" .
-        "Content-Type:text/html; charset=\"iso-8859-1\"\n" .
-        "Content-Transfer-Encoding: 7bit\n\n" . $email_txt;
-      $email_message .= "\n\n";
-      $data = chunk_split(base64_encode($data));
-      $email_message .= "--{$mime_boundary}\n" .
-        "Content-Type: {$fileatt_type};\n" .
-        " name=\"{$fileatt_name}\"\n" .
-        "Content-Transfer-Encoding: base64\n\n" .
-        $data . "\n\n" .
-        "--{$mime_boundary}--\n";
-
-      // echo $email_message;
+      // echo $email_txt;
       // exit(0);
-      mail($email_to, $email_subject, $email_message, $headers);
 
+      // --------variables end
 
-      // Email to be sent to User
-      //==========================
+      // --------------------------- New Email to Admin - START
 
-      // Check whether sign in email and Contact Email are same. If not send mail to both email ids.
+      //admin email = sampathraj.mp@gmail.com
+      $phpemail->AddAddress(ADMIN_EMAIL);
 
-      // Variables : icId, icTitle, icFilename, imgpath
+      $phpemail->Subject = "New Abstract Submitted - " . $_SESSION['icid'];
+      $phpemail->MsgHTML($email_body);
+      $phpemail->AddAttachment("uploads/" . $newFileName);
+      if (!$phpemail->Send()) {
+        echo '<p style="color:red"></p>';
+        echo '<script>document.getElementById("error").innerHTML = "Error sending email. Contact Administrator";</script>';
+        exit;
+      }
+      //clear all mail receipients and Attachments
+      $phpemail->clearAddresses();
+      $phpemail->clearAttachments();
+
+      // echo "Message was sent successfully";
+
+      // --------------------------- New Email to Admin - END
+
+      // --------------------------- New Email Notification to USER - START
+
+      // ------- variables 
 
       $variables = array();
 
@@ -444,50 +401,47 @@ if (isset($_POST['txtSubmit'])) {
       $variables['icTitle'] = $abname;
       $variables['icFilename'] = $fileName;
 
-      // echo $variables['imgpath'];
-
       $template = file_get_contents("templates/abstractTemplate.html");
 
       foreach ($variables as $key => $value) {
         $template = str_replace('{{ ' . $key . ' }}', $value, $template);
       }
-      $email_txt = $template;
 
-      $email_to = $userEmail;
-      $email_from = "icons@igcar.gov.in"; // The email you are sending from (example)
-      $email_subject = "ICONS 2023 Conference - Abstract Received"; // The Subject of the email
-      //$email_txt = "text body of message"; // Message that the email has in it
+      $email_body = $template;
 
+      // --------variables end
 
+      //Primary Email
+      $phpemail->AddAddress($userEmail);
 
-      $semi_rand = md5(time());
-      $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-      $headers = "From: $email_from"; // Who the email is from (example)
-      $headers .= "\nMIME-Version: 1.0\n" .
-        "Content-Type: multipart/mixed;\n" .
-        " boundary=\"{$mime_boundary}\"";
-      $email_message = "This is a multi-part message in MIME format.\n\n" .
-        "--{$mime_boundary}\n" .
-        "Content-Type:text/html; charset=\"iso-8859-1\"\n" .
-        "Content-Transfer-Encoding: 7bit\n" . $email_txt;
-      $email_message .= "\n\n";
-
-
-      // echo $email_message;
-      // echo $email_to;
-      // exit(0);
-      $sentusermail = mail($email_to, $email_subject, $email_message, $headers);
-      if (!$sentusermail) {
-        echo "<script>alert('Mail Notification Error! Contact Administrator!');</script>";
+      //Additional Email
+      if (isset($userEmail2)) {
+        $phpemail->AddAddress($userEmail2);
       }
 
+      $phpemail->Subject = "ICONS 2023 Conference - Abstract Received - " . $_SESSION['icid'];
+      $phpemail->MsgHTML($email_body);
+      $phpemail->AddAttachment("uploads/" . $newFileName);
+      if (!$phpemail->Send()) {
+        echo '<p style="color:red"></p>';
+        echo '<script>document.getElementById("error").innerHTML = "Error sending email. Contact Administrator";</script>';
+        exit;
+      }
+      //clear all mail receipients and Attachments
+      $phpemail->clearAddresses();
+      $phpemail->clearAttachments();
 
-      //header("Location:abstractupload.php");
+      // echo "Message was sent successfully";
+
+      // --------------------------- New Email Notification to USER - END
+      
+      // echo "<script>alert('Mail Notification Sent! You will be redirected to Abstract Page!');</script>";
+      // echo '<script>document.getElementById("success").innerHTML = "Abstract Submission Mail Notification Success.";</script>';
       echo '<meta http-equiv="Refresh" content="2; url=abstractupload.php">';
-    } /*Mail trigger for abstract submission end */
+    }    /*Mail trigger for abstract submission end */
 
 
-    //Delete Action - Start
+    //Delete Action -------------------- Start
     if (isset($_REQUEST['dl'])) { //File Delete Process
       $did = $_REQUEST['dl'];
       // $dlname=$_REQUEST['dlnm'];
