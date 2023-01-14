@@ -1,2 +1,4 @@
 This file to to enable the GITHUB create the directory when auto-deployed.
 This file not used in the application.
+
+To create Autodeployment test, this line was added.
