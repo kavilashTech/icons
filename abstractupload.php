@@ -371,8 +371,11 @@ if (isset($_POST['txtSubmit'])) {
 
       // --------------------------- New Email to Admin - START
 
+      $phpemail->From = 'contact@icons2023.in';
+
       //admin email = sampathraj.mp@gmail.com
       $phpemail->AddAddress(ADMIN_EMAIL);
+
 
       $phpemail->Subject = "New Abstract Submitted - " . $_SESSION['icid'];
       $phpemail->MsgHTML($email_body);
@@ -411,6 +414,8 @@ if (isset($_POST['txtSubmit'])) {
 
       // --------variables end
 
+      $phpemail->From = 'contact@icons2023.in';
+
       //Primary Email
       $phpemail->AddAddress($userEmail);
 
@@ -422,6 +427,7 @@ if (isset($_POST['txtSubmit'])) {
       $phpemail->Subject = "ICONS 2023 Conference - Abstract Received - " . $_SESSION['icid'];
       $phpemail->MsgHTML($email_body);
       $phpemail->AddAttachment("uploads/" . $newFileName);
+
       if (!$phpemail->Send()) {
         echo '<p style="color:red"></p>';
         echo '<script>document.getElementById("error").innerHTML = "Error sending email. Contact Administrator";</script>';
