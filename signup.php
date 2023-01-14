@@ -149,14 +149,14 @@ if (isset($_POST['ru_email'])) {
 
       // Sender info 
       // TODO From email id and Reply To - to be updated
-      $phpemail->setFrom('sender@example.com', 'SenderName');
-      $phpemail->addReplyTo('reply@example.com', 'SenderName');
+      $phpemail->setFrom('icons@igcar.gov.in', 'ICONS 2023');
+      $phpemail->addReplyTo('icons@igcar.gov.in', 'ICONS 2023');
 
       // Add a recipient 
       $phpemail->addAddress($ru_email);
       // $phpemail->addAddress('sampathraj.mp@gmail.com');
 
-      $phpemail->addCC('sampathraj.mp@gmail.com'); 
+      // $phpemail->addCC('sampathraj.mp@gmail.com'); 
       //$phpemail->addBCC('bcc@example.com'); 
 
       // Set email format to HTML 

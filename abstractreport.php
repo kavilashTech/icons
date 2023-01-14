@@ -118,7 +118,7 @@ if (!isset($_SESSION["uid"])) {
          include("pagination/function.php");
          $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
          //$page=1;
-         $limit = 6; //if you want to dispaly 10 records per page then you have to change here
+         $limit = 10; //if you want to dispaly 10 records per page then you have to change here
          $startpoint = ($page * $limit) - $limit;
          //echo $startpoint . "<br>";
          //SQL to pick up records

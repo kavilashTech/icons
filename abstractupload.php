@@ -281,7 +281,7 @@ if (isset($_POST['txtSubmit'])) {
 
           //function for upload file into server
           if (move_uploaded_file($fileTmpName, $uploadPath)) {
-            echo '<script>document.getElementById("message").innerHTML = "Successfully uploaded";</script>';
+            echo '<script>document.getElementById("message").innerHTML = "Successfully uploaded. Please wait for Page Refresh!";</script>';
           } else {
             echo '<p style="color:red"></p>';
             echo '<script>document.getElementById("error").innerHTML = "File upload failed.";</script>';
@@ -371,7 +371,7 @@ if (isset($_POST['txtSubmit'])) {
 
       // --------------------------- New Email to Admin - START
 
-      $phpemail->From = 'contact@icons2023.in';
+      $phpemail->From = 'icons@igcar.gov.in';
 
       //admin email = sampathraj.mp@gmail.com
       $phpemail->AddAddress(ADMIN_EMAIL);
@@ -414,13 +414,15 @@ if (isset($_POST['txtSubmit'])) {
 
       // --------variables end
 
-      $phpemail->From = 'contact@icons2023.in';
+      $phpemail->From = 'icons@igcar.gov.in';
 
       //Primary Email
       $phpemail->AddAddress($userEmail);
 
       //Additional Email
-      if (isset($userEmail2)) {
+      if (isset($userEmail2) && $userEmail2 != "" ) {
+        // echo "additional emai :" . $userEmail2 . "]";
+        // exit(0);
         $phpemail->AddAddress($userEmail2);
       }
 
@@ -443,7 +445,7 @@ if (isset($_POST['txtSubmit'])) {
       
       // echo "<script>alert('Mail Notification Sent! You will be redirected to Abstract Page!');</script>";
       // echo '<script>document.getElementById("success").innerHTML = "Abstract Submission Mail Notification Success.";</script>';
-      echo '<meta http-equiv="Refresh" content="2; url=abstractupload.php">';
+      echo '<meta http-equiv="Refresh" content="0; url=abstractupload.php">';
     }    /*Mail trigger for abstract submission end */
 
 
@@ -486,7 +488,7 @@ if (isset($_POST['txtSubmit'])) {
       if (mysqli_query($connection, $sql)) {
         echo '<script>document.getElementById("message").innerHTML = "File deleted successfully"; alert("File Deleted");</script>';
         //header("Location:abstractupload.php");
-        echo '<meta http-equiv="Refresh" content="1; url=abstractupload.php">';
+        echo '<meta http-equiv="Refresh" content="0; url=abstractupload.php">';
       } else {
         //  echo "Error deleting record: " . mysqli_error($connection);
         echo '<script>document.getElementById("error").innerHTML = "Error on deleting file. Please contact Administrator.";</script>';
