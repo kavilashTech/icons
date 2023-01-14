@@ -20,6 +20,6 @@ jobs:
         server: www.icons2023.in
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /public_html/staging.icons2023.in/
+        server-dir: /public_html/
         protocol: ftps
         security: loose
