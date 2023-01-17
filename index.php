@@ -38,8 +38,12 @@ include 'includes/menu.php';
   <div class="col-xs-12">
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
-        <strong>&nbsp;&nbsp;&nbsp;Abstract submission is now open. <span style="background-color:darkblue;color:#fff;">&nbsp;Click here to Submit Abstract.&nbsp;</span> Selected submissions will appear in a suitable journal after due peer review process. </strong> &nbsp;&nbsp;&nbsp;
+        <strong>&nbsp;&nbsp;&nbsp;Abstract submission is now open. <a href="login.php"><span style="background-color:darkblue;color:#fff;">Click here to Submit Abstract.</span></a>&nbsp;&nbsp;Selected submissions will appear in a suitable journal after due peer review process. </strong> &nbsp;&nbsp;&nbsp;
       </span>
+
+      <!-- <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
+			<strong>&nbsp;&nbsp;&nbsp;Conference Abstract Book is Released. Please  <a href="docs/conference_abstract_book.pdf" target="_blank">download here.</a></strong> &nbsp;&nbsp;&nbsp;
+		</span> -->
 
     </marquee>
   </div>
