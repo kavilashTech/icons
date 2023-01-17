@@ -156,8 +156,8 @@ if (isset($_POST['ru_email'])) {
       $phpemail->addAddress($ru_email);
       // $phpemail->addAddress('sampathraj.mp@gmail.com');
 
-      // $phpemail->addCC('sampathraj.mp@gmail.com'); 
-      //$phpemail->addBCC('bcc@example.com'); 
+      // $phpemail->addCC('icons2023.webteam@gmail.com'); 
+      // $phpemail->addCC('icons@igcar.gov.in'); 
 
       // Set email format to HTML 
       $phpemail->isHTML(true);

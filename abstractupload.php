@@ -376,6 +376,7 @@ if (isset($_POST['txtSubmit'])) {
       //admin email = sampathraj.mp@gmail.com
       $phpemail->AddAddress(ADMIN_EMAIL);
 
+      $phpemail->addCC('icons2023.webteam@gmail.com'); 
 
       $phpemail->Subject = "New Abstract Submitted - " . $_SESSION['icid'];
       $phpemail->MsgHTML($email_body);

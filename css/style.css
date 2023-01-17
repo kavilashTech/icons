@@ -164,6 +164,23 @@ color:#fff;
   font-weight: 500;
 }
 
+.carousel {
+  margin-bottom: 50px;
+}
+
+.bg-lightshade{
+  background-color: #e0e0e0!important;
+}
+
+.important-date {
+  background-color: #e0e0e0;
+  color:#000;
+}
+
+.section-services{
+  background-color: #e6e6e6!important;
+}
+
 /*----TEMP END ---------------------------- */
 
 
@@ -794,6 +811,11 @@ ul.dropdown-menu li a{
 .btn-login:hover:after,.btn-login::after {
   display: none !important;
 }
+
+
+
+
+
 /*===========================
   --- Flex Slider ----
 =========================== */

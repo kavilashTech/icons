@@ -38,7 +38,7 @@ include 'includes/menu.php';
   <div class="col-xs-12">
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
-        <strong>&nbsp;&nbsp;&nbsp;Abstract submission is now open. Selected submissions will appear in a suitable journal after due peer review process. </strong> &nbsp;&nbsp;&nbsp;
+        <strong>&nbsp;&nbsp;&nbsp;Abstract submission is now open. <span style="background-color:darkblue;color:#fff;">&nbsp;Click here to Submit Abstract.&nbsp;</span> Selected submissions will appear in a suitable journal after due peer review process. </strong> &nbsp;&nbsp;&nbsp;
       </span>
 
     </marquee>
@@ -168,7 +168,7 @@ include 'includes/menu.php';
 
 
 <!-- services -->
-<section id="section-services" class="section pad-bot30 pad-top0 bg-white">
+<section id="section-services" class="section pad-bot30 pad-top0 section-services">
   <div class="container">
 
     <div class="row mar-bot40">
@@ -403,7 +403,7 @@ include 'includes/menu.php';
 <!-- /about -->
 
 <!-- spacer section:stats -->
-<section id="parallax1" class="section" data-stellar-background-ratio="0.5">
+<!-- <section id="parallax1" class="section" data-stellar-background-ratio="0.5">
   <div class="container">
     <div class="row appear stats">
       <div class="col-md-3">
@@ -444,10 +444,10 @@ include 'includes/menu.php';
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- section important date -->
-<section id="section-importantdate" class="section important-date clearfix bg-white">
+<section id="section-importantdate" class="section important-date clearfix bg-lightshade">
   <div class="container">
     <div class="row mar-bot40">
       <div class="col-md-1"></div>
