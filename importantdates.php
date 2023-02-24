@@ -29,7 +29,7 @@
                 </tr>
                 <tr>
                   <td>Acceptance notification</td>
-                  <td>30th May, 2023</td>
+                  <td>30th April, 2023</td>
                 </tr>
                 <tr>
                   <td>Submission of manuscript</td>
