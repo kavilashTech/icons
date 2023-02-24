@@ -25,11 +25,11 @@
               <tbody>
                 <tr>
                   <td>Deadline for abstract submission</td>
-                  <td>28th February, 2023</td>
+                  <td>15th April, 2023&nbsp;&nbsp;<span class="badge badge-danger ms-2" style="background-color:red;">Extended</span></td>
                 </tr>
                 <tr>
                   <td>Acceptance notification</td>
-                  <td>31st March, 2023</td>
+                  <td>30th May, 2023</td>
                 </tr>
                 <tr>
                   <td>Submission of manuscript</td>
@@ -37,11 +37,11 @@
                 </tr>
                 <tr>
                   <td>Communication of review outcome of manuscript</td>
-                  <td>15th June, 2023</td>
+                  <td>30th June, 2023</td>
                 </tr>
                 <tr>
                   <td>Submission of revised camera-ready manuscripts</td>
-                  <td>15th July, 2023</td>
+                  <td>31st July, 2023</td>
                 </tr>
                 <tr>
                   <td>Conference dates</td>
