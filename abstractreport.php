@@ -151,7 +151,7 @@ if (!isset($_SESSION["uid"])) {
                            <th style="vertical-align:middle; text-align:center;" width="12%">ICONS ID</th>
                            <th style="vertical-align:middle; text-align:center;" width=22%>Name</th>
                            <th style="vertical-align:middle; text-align:center;">Title</th>
-                           <th style="vertical-align:middle; text-align:center;">Filename</th>
+                           <!-- <th style="vertical-align:middle; text-align:center;">Download</th> -->
                         </tr>
                      </thead>
 
@@ -163,8 +163,9 @@ if (!isset($_SESSION["uid"])) {
                         <tr>
                            <td><?php echo $row['USERID']; ?></td>
                            <td><?php echo $row['Fname'] . " " . $row['Lname']; ?></td>
-                           <td><?php echo $row['TITLE']; ?></td>
-                           <td><a href="uploads/<?php echo $row['su_abstract_path']; ?>"><?php echo $row['Filename']; ?></a></td>
+                           <td><?php echo "Title : " .  $row['TITLE']; ?><BR>
+                           Filename : <a href="uploads/<?php echo $row['su_abstract_path']; ?>"><?php echo $row['Filename']; ?></a></td>
+                           <!-- <td style="text-align:center"><i class="fa fa-download text-primary"></i></td> -->
                            </td>
                         </tr>
                   <?php
