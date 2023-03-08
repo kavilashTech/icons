@@ -23,13 +23,5 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php'; 
 $phpemail = new PHPMailer(TRUE);
 
-//$mail->SMTPDebug = SMTP::DEBUG_SERVER;    //Enable verbose debug output 
-$phpemail->isSMTP();                            // Set mailer to use SMTP 
-$phpemail->Host = 'smtp.gmail.com';           // Specify main and backup SMTP servers 
-$phpemail->SMTPAuth = true;                     // Enable SMTP authentication 
-$phpemail->Username = 'sampathraj.mp@gmail.com';       // SMTP username 
-$phpemail->Password = 'ftkqhlddckmalage';         // SMTP password 
-$phpemail->SMTPSecure = 'TLS';                  // Enable TLS encryption, `ssl` also accepted 
-$phpemail->Port = 587;                          // TCP port to connect to 
 
  ?>
