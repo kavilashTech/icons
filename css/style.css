@@ -617,7 +617,7 @@ section.section {
   line-height: 100%;
   margin-bottom: 0;
   padding-bottom: 0;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .nav > li > a {
@@ -626,7 +626,7 @@ section.section {
   line-height: 100%;
   vertical-align: middle;
   color: rgb(54, 82, 173);
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
