@@ -31,7 +31,7 @@
             <li><a href="index.php#mark-about">About Conference</a></li>
             <li><a href="scope.php">Conference Objectives</a></li>
             <li><a href="organizers.php">Organizers</a></li>
-            <li><a href="patrons.php">Patrons</a></li>
+            <!-- <li><a href="patrons.php">Patrons</a></li> -->
             <li><a href="importantdates.php">Important Dates</a></li>
             <li><a href="venue.php">Venue</a></li>
             <li><a href="sponsorship.php">Sponsorship</a></li>
@@ -40,7 +40,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Downloads <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="docs/ICONS2023_Brochure.pdf" target="_blank">Conference Brochure</a></li>
+            <!-- <li><a href="docs/ICONS2023_Brochure.pdf" target="_blank">Conference Brochure</a></li> -->
             <li><a href="docs/ICONS2023_Flyer.pdf" target="_blank">Conference Flyer</a></li>
 
           </ul>
