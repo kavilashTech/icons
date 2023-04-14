@@ -40,7 +40,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Downloads <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="docs/ICONS2023_Brochure.pdf" target="_blank">Conference Brochure</a></li>
+            <li><a href="docs/ICONS2023_Brochure.pdf" title="ICONS 2023" target="_blank">Conference Brochure</a></li>
             <li><a href="docs/ICONS2023_Flyer.pdf" target="_blank">Conference Flyer</a></li>
 
           </ul>
