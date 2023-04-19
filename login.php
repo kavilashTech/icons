@@ -58,7 +58,7 @@
 
 						<hr class="hr-blue">
 						Note:<br />
-						<p class="form-group text-center">If you have any issues in logging in or during submission of Manuscript, please send a brief description of the issue to <a href="mailto:icons2023@igcar.gov.in"><b>icons2023@igcar.gov.in</b></a> with your contact details. Our web team will assist you in resolving the issue.</p>
+						<p class="form-group text-center">If you have any issues in signing up, logging in or during submission of Manuscript, please send a brief description of the issue to <a href="mailto:webteam.icons2023@gmail.com"><b>webteam.icons2023@gmail.com</b></a> with your contact details. Our web team will assist you in resolving the issue.</p>
 
 
 					</form>
