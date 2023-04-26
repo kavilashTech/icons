@@ -170,12 +170,12 @@ if (isset($_POST['txtSubmit'])) {
     <!-- Uploaded files table start -->
 
 
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped" style="border-collapse:collapse;table-layout:fixed;">
       <tr style="background-color:grey;color:#fff">
         <th width="5%">S.No.</th>
-        <th width="20%">Abstract Title</th>
+        <th width="10%">Abstract Title</th>
         <th width="30%">Topic</th>
-        <th>Abstract(s)</th>
+        <th width="30%">Abstract(s)</th>
         <th width="7%">Actions</th>
       </tr>
       <?php
@@ -199,11 +199,11 @@ if (isset($_POST['txtSubmit'])) {
         while ($row = mysqli_fetch_assoc($result)) {
           echo '<tr >
                   <td>' . $sno . '</td>
-                  <td>' . $row['su_abstracttitle'] . '</td>
-                  <td>' . $row['to_topic_name'] . '</td>' ?>
+                  <td><div style="white-space:normal;overflow-x:hidden">' . $row['su_abstracttitle'] . '</div></td>
+                  <td><div style="white-space:normal;overflow-x:hidden">' . $row['to_topic_name'] . '</div></td>' ?>
           <!--  CF820200001001 : IC2023001001 -->
-          <td>
-            <?php echo '<a href="uploads/' . $row['su_abstract_path'] . '" download="' . substr($row['su_abstract_path'], 12) . '" title="' . $row['su_abstract_path'] . '">' . substr($row['su_abstract_path'], 12) . '</a></td>';
+          <td><div style="white-space:normal;overflow-x:hidden">
+            <?php echo '<a href="uploads/' . $row['su_abstract_path'] . '" download="' . substr($row['su_abstract_path'], 12) . '" title="' . $row['su_abstract_path'] . '">' . substr($row['su_abstract_path'], 12) . '</a></div></td>';
             echo '
                   <td><a href="abstractupload-edit.php?ed=' . $row['su_id'] . '" style="color:green"><i class="fa fa-edit" title="Edit"></i></a>&nbsp;&nbsp;';
             //&nbsp;&nbsp;<a href="uploads/'.$row['su_abstract_path'].'" style="color:green" download><i class="fa fa-download"></i></a>
