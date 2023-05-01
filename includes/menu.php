@@ -40,7 +40,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Downloads <span class="caret"></span>&nbsp;<img width="20px" src="img/badge-new.png"></a>
           <ul class="dropdown-menu">
-            <li><a href="docs/ICONS2023_Brochure.pdf" title="ICONS 2023" target="_blank">Conference Brochure</a></li>
+            <li><a href="docs/ICONS2023-Final_Announcment.pdf" title="ICONS 2023" target="_blank">Conference Brochure</a></li>
             <li><a href="docs/ICONS2023_Flyer.pdf" target="_blank">Conference Flyer</a></li>
             <li><a href="docs/ICONS2023-Final_Announcment.pdf" target="_blank">Final Announcement&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
             <li><a href="docs/ICONS2023-Pre-ConferenceWorkshop.pdf" target="_blank">Pre-Conf. Workshop&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
