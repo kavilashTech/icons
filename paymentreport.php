@@ -119,16 +119,16 @@ ORDER BY pay.user_table_ru_id ASC";
 
 
          <?php
-   //----------------------------------- Paging Start ----------------------------
+         //----------------------------------- Paging Start ----------------------------
 
 
-   include("pagination/function.php");
-   $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
-   //$page=1;
-   $limit = 10; //if you want to dispaly 10 records per page then you have to change here
-   $startpoint = ($page * $limit) - $limit;
-   //echo $startpoint . "<br>";
-   //SQL to pick up records
+         include("pagination/function.php");
+         $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
+         //$page=1;
+         $limit = 10; //if you want to dispaly 10 records per page then you have to change here
+         $startpoint = ($page * $limit) - $limit;
+         //echo $startpoint . "<br>";
+         //SQL to pick up records
 
          //$sql="SELECT empay.*, eauth.au_firstname, eauth.au_lastname,eauth.au_affiliation FROM `emsi_payment` as empay, emsi_author_table as eauth WHERE eauth.emsi_user_table_ru_id = empay.emsi_user_table_ru_id and eauth.au_author_type = 'P' ORDER BY `empay`.`emsi_user_table_ru_id` ASC";
          $statement = "SELECT user.ru_id, pay.*, contact.au_firstname, contact.au_lastname, contact.au_affiliation 
@@ -202,21 +202,35 @@ ORDER BY pay.user_table_ru_id ASC";
                            <td style="padding:8px 7px"><?php echo date("d-m-Y", strtotime($row['pm_payment_date']));  ?></td>
                            <td><?php echo $row['pm_payeebank'] ?>, <?php echo $row['pm_branch'] ?></td>
                         </tr>
-                  <?php $sno++;
+                        </table>
+                     <?php $sno++;
                      }
-                  } ?>
-                  </table>
-                  <?php
-                  echo "<div id='pagingg' align='right' >";
-                  echo pagination($connection, $statement, $limit, $page);
-                  echo "</div>";
-                  ?>
+                  } else {
+
+                     ?>
+                     <!-- <div class="row ">
+                        <div class="col-auto"> -->
+                           <table class="table table-responsive tbl-reports">
+                              <tr>
+                                 <td style="text-align:center;color:red;">
+                                    NO Records Found
+                                 </td>
+                              </tr>
+                           </table>
+                           <?php
+                        } ?>
+                          
+                           <?php
+                           echo "<div id='pagingg' align='right' >";
+                           echo pagination($connection, $statement, $limit, $page);
+                           echo "</div>";
+                           ?>
+                        </div>
+                     </div>
                </div>
             </div>
       </div>
    </div>
-</div>
-</div>
 
-<!-- footer -->
-<?php include 'includes/script.php'; ?>
+   <!-- footer -->
+   <?php include 'includes/script.php'; ?>
