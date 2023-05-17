@@ -19,9 +19,10 @@
         <div class="col-lg-3 col-xs-12 links">
           <h4 class="mt-lg-0 mt-sm-3">Quick Links</h4>
           <ul class="m-0 p-0">
-            <li>- <a href="#">Abstract Submission</a></li>
-            <li>- <a href="#">Contact Information</a></li>
-            <li>- <a href="#">Logout</a></li>
+            <li>- <a href="abstractupload.php">Abstract Submission</a></li>
+            <li>- <a href="contactinformation.php">Contact Information</a></li>
+            <li>- <a href="paymentcalculation.php">Payment Calculation</a></li>
+            <!-- <li>- <a href="#">Logout</a></li> -->
           </ul>
         </div>
         <div class="col-lg-4 col-xs-12 location">

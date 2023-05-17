@@ -6,7 +6,8 @@
         ?></p>
     </div>
     <a id="side_menu" href="contactinformation.php">Contact Information</a>
-    <!-- <a id="side_menu" href="#">Payment Information</a> -->
+    <a id="side_menu" href="paymentcalculation.php">Payment Calculation</a>
+    <a id="side_menu" href="paymentdetails.php">Payment Details</a>
     <a id="side_menu" href="abstractupload.php">Submit Abstract</a>
     <a id="side_menu" href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a>
     <?php
@@ -20,5 +21,5 @@
         <a id="side_menu" href="abstractreport.php">Submission Report</a>
     <?php } ?>
 <hr>
-    <div class="help_note"><a href="#">Help</a></div>
+    <!-- <div class="help_note"><a href="#">Help</a></div> -->
 </div>

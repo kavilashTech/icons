@@ -42,8 +42,9 @@
           <ul class="dropdown-menu">
             <li><a href="docs/ICONS2023-Final_Announcment.pdf" title="ICONS 2023" target="_blank">Conference Brochure</a></li>
             <li><a href="docs/ICONS2023_Flyer.pdf" target="_blank">Conference Flyer</a></li>
-            <li><a href="docs/ICONS2023-Final_Announcment.pdf" target="_blank">Final Announcement&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
-            <li><a href="docs/ICONS2023-Pre-ConferenceWorkshop.pdf" target="_blank">Pre-Conf. Workshop&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
+            <li><a href="docs/ICONS2023-Final_Announcment.pdf" target="_blank">Final Announcement</a></li>
+            <li><a href="docs/ICONS2023-Pre-ConferenceWorkshop.pdf" target="_blank">Pre-Conf. Workshop-1</a></li>
+            <li><a href="docs/preconf2-workshop-flyer.pdf" target="_blank">Pre-Conf. Workshop-2&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
 
 
           </ul>

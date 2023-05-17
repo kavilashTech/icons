@@ -136,6 +136,13 @@ function emailcompare()
 <!-- content page -->
 <div class="mar-top30">&nbsp;</div>
 
+<style>
+.tbl-none td{
+  border: none!important;
+}
+
+</style>
+
 <?php include 'includes/admin_sidenav.php'; ?>
 
 
@@ -266,7 +273,7 @@ function emailcompare()
                  </div> 
                </div>
             <div class="form-group">
-              <table width="100%">
+              <table class="tbl-none" width="100%">
                   <tr>
                     <td><label for="chk_iim">&nbsp;IIM Member</label>&nbsp;&nbsp;&nbsp;
                     <input type="checkbox" name="chk_iim" id="chk_iim" <?php if ($iim == 'Y'){echo 'checked';}?>> 
@@ -276,7 +283,7 @@ function emailcompare()
                 </table>
               </div>
             <div class="form-group">
-              <table width="100%">
+              <table class="tbl-none" width="100%">
                   <tr>
                     <td><label for="chk_isnt">&nbsp;ISNT Member</label>&nbsp;&nbsp;&nbsp;
                     <input type="checkbox" name="chk_isnt" id="chk_isnt" <?php if ($isnt == 'Y'){echo 'checked';}?>> <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an ISNT Member)</span></td>
@@ -286,7 +293,7 @@ function emailcompare()
               </div>
 
             <div class="form-group">
-              <table width="100%">
+              <table class="tbl-none" width="100%">
                   <tr>
                     <td><label for="chk_insis">&nbsp;InSIS Member</label>&nbsp;&nbsp;&nbsp;
                     <input type="checkbox" name="chk_insis" id="chk_insis" <?php if ($insis == 'Y'){echo 'checked';}?>> <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an InSIS Member)</span></td>
@@ -295,7 +302,7 @@ function emailcompare()
                 </table>
               </div>
             <div class="form-group">
-              <table width="100%">
+              <table class="tbl-none" width="100%">
                   <tr>
                     <td><label for="chk_sfa">&nbsp;SFA Member</label>&nbsp;&nbsp;&nbsp;
                     <input type="checkbox" name="chk_sfa" id="chk_sfa" <?php if ($sfa == 'Y'){echo 'checked';}?>> <span style="font-size:12px">   &nbsp;&nbsp;&nbsp;(Check this if you are an SFA Member)</span></td>
