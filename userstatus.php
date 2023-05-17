@@ -107,7 +107,7 @@ if (!isset($_SESSION["uid"])) {
                                  $vstatus = $row['ru_verify_status'];
                                  switch ($vstatus) {
                                     case '0':
-                                       $status = 'E-Mail Sent,Verification is Pending';
+                                       $status = '<span style="color:blue;font-weight:800">E-Mail Sent,Verification is Pending</span>';
                                        break;
                                     case '1':
                                        $status = 'E-Mail Verification Passed';

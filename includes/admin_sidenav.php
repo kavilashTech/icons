@@ -17,7 +17,7 @@
         <p class="sidenav_admin">Admin Menu</p>
         <a id="side_menu" href="userstatus.php">User Status</a>
         <a id="side_menu" href="registrationreport.php">Registration Report</a>
-        <!-- <a id="side_menu" href="#">Payment Report</a> -->
+        <a id="side_menu" href="paymentreport.php">Payment Report</a>
         <a id="side_menu" href="abstractreport.php">Submission Report</a>
     <?php } ?>
 <hr>
