@@ -76,21 +76,21 @@ if (mysqli_num_rows($arow) > 0) {
 		$member = "IIM";
 	}
 	if ($isnt == 'Y') {
-		$member .= ", ISNT";
+		$member .= " ISNT";
 	}
 	if ($insis == 'Y') {
-		$member .= ", INSIS";
+		$member .= " INSIS";
 	}
 	if ($sfa == 'Y') {
-		$member .= ", SFA";
+		$member .= " SFA";
 	}
-	$member = "None";
 
 	//Update Membership Flag
-	if ($member != "None") {
+	if ($member != "") {
 		$isMember = "Y";
 	} else {
 		$isMember = "N";
+		$member = "None";
 	}
 	// $isMember = $member;
 
@@ -202,7 +202,8 @@ if (mysqli_num_rows($arow) > 0) {
 					// var totalFees = "";
 
 					var confFlag = 0;
-					var preconfFlag = 0;
+					var preconfFlag1 = 0;
+					var preconfFlag2 = 0;
 					var spouseFlag = 0;
 
 
@@ -210,9 +211,13 @@ if (mysqli_num_rows($arow) > 0) {
 						// totalFees = 12000;
 						confFlag = 1;
 					}
-					if (document.getElementById("chk_preconference").checked == true) {
+					if (document.getElementById("chk_preconference1").checked == true) {
 						// totalFees = totalFees += 2000;
-						preconfFlag = 1;
+						preconfFlag1 = 1;
+					}
+					if (document.getElementById("chk_preconference2").checked == true) {
+						// totalFees = totalFees += 2000;
+						preconfFlag2 = 1;
 					}
 					if (document.getElementById("chk_spouse").checked == true) {
 						// totalFees = totalFees += 5000;
@@ -226,10 +231,15 @@ if (mysqli_num_rows($arow) > 0) {
 						GTotalFees = confFees;
 
 					}
-					if (preconfFlag == 1) {
-						feeSummaryText += "Pre-Conference Fees :<BR>"
+					if (preconfFlag1 == 1) {
+						feeSummaryText += "Pre-Conference (1) Fees :<BR>"
 						totalFees += preConf1 + "<BR>";
 						GTotalFees += preConf1;
+					}
+					if (preconfFlag2 == 1) {
+						feeSummaryText += "Pre-Conference (2) Fees :<BR>"
+						totalFees += preConf2 + "<BR>";
+						GTotalFees += preConf2;
 					}
 					if (spouseFlag == 1) {
 						feeSummaryText += "Spouse Fees :"
@@ -416,10 +426,18 @@ if (mysqli_num_rows($arow) > 0) {
 						<?php if ($nationality == 82) { ?>
 							<div class="row mar-bot10" id="preconfBlock">
 								<div class="col-md-8 ">
-									<label for="chk_preconference" class="mar-left20">Attending Pre-Conference Workshop</label>
+									<label for="chk_preconference1" class="mar-left20">Attending Pre-Conference Workshop<br><span style="font-weight:400">(FFASC)</span></label>
 								</div>
 								<div class="col-md-2">
-									<input type="checkbox" name="chk_preconference" id="chk_preconference">
+									<input type="checkbox" name="chk_preconference1" id="chk_preconference1">
+								</div>
+							</div>
+							<div class="row mar-bot10" id="preconfBlock">
+								<div class="col-md-8 ">
+									<label for="chk_preconference2" class="mar-left20">Attending Pre-Conference Workshop<br><span style="font-weight:400"> (Large Size Components)</span></label>
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox" name="chk_preconference2" id="chk_preconference2">
 								</div>
 							</div>
 						<?php } ?>
