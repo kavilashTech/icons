@@ -63,13 +63,14 @@ if (!isset($_REQUEST["txtFlag"])) {
 	$isnt      = "";
 	$insis     = "";
 	$sfa     = "";
+	$membershipID = "";
 
 	$student   = "";
 
 	// Check whether data is already available for this user
 
 	//		$selsql = "SELECT * FROM `icr_contact_table` WHERE icr_user_table_ru_id = " . $uid . " and au_active = 1" ;
-	$selsql = "SELECT a.au_firstname, a.au_lastname, a.au_addlemailid, a.au_phone, a.au_mobile, a.au_affiliation, b.na_name, b.na_id as nationality, a.au_iim, a.au_isnt, a.au_insis, a.au_sfa, a.au_student FROM contact_table a, nationality b WHERE a.au_nationality = b.na_id and a.user_table_ru_id = " . $uid . " and au_active = 1";
+	$selsql = "SELECT a.au_firstname, a.au_lastname, a.au_addlemailid, a.au_phone, a.au_mobile, a.au_affiliation, b.na_name, b.na_id as nationality, a.au_iim, a.au_isnt, a.au_insis, a.au_sfa, a.au_student, au_memberid FROM contact_table a, nationality b WHERE a.au_nationality = b.na_id and a.user_table_ru_id = " . $uid . " and au_active = 1";
 	// echo '<br><br><br><br><br><br><br>';
 	//  echo $selsql;
 	//  exit(0);
@@ -93,6 +94,8 @@ if (!isset($_REQUEST["txtFlag"])) {
 		$isnt 		= $result['au_isnt'];
 		$insis 		= $result['au_insis'];
 		$sfa 		= $result['au_sfa'];
+
+		$membershipID = $result['au_memberid'];
 
 		$student	= $result['au_student'];
 		$nationality	= $result['nationality'];
@@ -131,31 +134,32 @@ if (!isset($_REQUEST["txtFlag"])) {
 		// $isnt		= trim($_REQUEST["chk_isnt"]);
 		// $insis		= trim($_REQUEST["chk_insis"]);
 		$nationality	= $_POST['sel_nationality'];
+		$membershipID  = $_POST['txtmembershipid'];
 
 		if (!empty($_REQUEST['chk_student'])) {
-		$student  = "Y";
-		}else{
-		$student  = "N";
+			$student  = "Y";
+		} else {
+			$student  = "N";
 		}
 		if (!empty($_REQUEST['chk_iim'])) {
-		$iim  = "Y";
-		}else{
-		$iim  = "N";
+			$iim  = "Y";
+		} else {
+			$iim  = "N";
 		}
 		if (!empty($_REQUEST['chk_isnt'])) {
-		$isnt  = "Y";
-		}else{
-		$isnt = "N";
+			$isnt  = "Y";
+		} else {
+			$isnt = "N";
 		}
 		if (!empty($_REQUEST['chk_insis'])) {
-		$insis = "Y";
-		}else{
-		$insis = "N";
+			$insis = "Y";
+		} else {
+			$insis = "N";
 		}
 		if (!empty($_REQUEST['chk_sfa'])) {
-		$sfa  = "Y";
-		}else{
-		$sfa  = "N";
+			$sfa  = "Y";
+		} else {
+			$sfa  = "N";
 		}
 
 
@@ -163,8 +167,8 @@ if (!isset($_REQUEST["txtFlag"])) {
 
 
 
-		$inssql = "INSERT into contact_table (au_firstname, au_lastname, au_affiliation, au_addlemailid, au_mobile, au_phone, au_nationality, au_iim, au_isnt, au_insis ,au_sfa, au_student, user_table_ru_id, au_active) values
-													   ('$fname', '$lname', '$affi', '$ademail', '$mobile', '$phone', $nationality, '$iim', '$isnt', '$insis', '$sfa','$student', " . $_SESSION['uid'] . ", 1)";
+		$inssql = "INSERT into contact_table (au_firstname, au_lastname, au_affiliation, au_addlemailid, au_mobile, au_phone, au_nationality, au_iim, au_isnt, au_insis ,au_sfa, au_student, au_memberid, user_table_ru_id, au_active) values
+													   ('$fname', '$lname', '$affi', '$ademail', '$mobile', '$phone', $nationality, '$iim', '$isnt', '$insis', '$sfa','$student', '$membershipID', " . $_SESSION['uid'] . ", 1)";
 		// echo $inssql . "<BR>";
 		// 				echo $_REQUEST['sel_nationality'] . "<br>";
 		// 				echo $nationality;
@@ -199,6 +203,9 @@ if (!isset($_REQUEST["txtFlag"])) {
 		$mobile		= trim($_REQUEST["txtmobile"]);
 		$phone		= trim($_REQUEST["txtphone"]);
 		$nationality	= $_POST['sel_nationality'];
+		$membershipID	= $_POST['txtmembershipid'];
+
+
 		if (isset($_REQUEST["chk_iim"])) {
 			$iim		= "Y";
 		} else {
@@ -245,12 +252,13 @@ if (!isset($_REQUEST["txtFlag"])) {
 							 au_isnt = '" . $isnt . "',
 							 au_insis = '" . $insis . "',
 							 au_sfa = '" . $sfa . "',
-							 au_student = '" . $student . "'
+							 au_student = '" . $student . "',
+							 au_memberid = '" . $membershipID . "'
 							 WHERE user_table_ru_id = " . $uid;
 
-		//echo "<BR> " . $updatesql;
+		// echo "<BR> " . $updatesql;
 		//echo "<BR> " . $iim;
-		//exit(0);
+		// exit(0);
 
 		if (mysqli_query($connection, $updatesql) == TRUE) {
 			echo '<script>document.getElementById("success").innerHTML = "Updated successfully.";</script>';
@@ -299,6 +307,8 @@ if (!isset($_REQUEST["txtFlag"])) {
 			document.getElementById("chk_sfa").disabled = true;
 			document.getElementById("chk_student").disabled = true;
 			document.getElementById("sel_nationality").disabled = true;
+			document.getElementById("txtmembershipid").disabled = true;
+
 		}
 
 	}
@@ -386,111 +396,50 @@ if (!isset($_REQUEST["txtFlag"])) {
 		<form method="post" id="form1" class="form-horizontal" action="">
 			<div class="row">
 
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<div class="form-inline">
 						<label>First Name<span class="red">*</span></label>
 
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-3">
 					<input type="text" class="form-control" id="txtfname" name="txtfname" placeholder="Enter First Name" minlength="1" maxlength="45" required value="<?php echo $fname; ?>">
 					<label for="" class="control-label"></label>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
+			<!-- </div>
+			<div class="row"> -->
+				<div class="col-md-2">
 					<div class="form-inline">
 						<label>Last Name<span class="red">*</span></label>
 
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-3">
 					<input type="text" class="form-control" id="txtlname" name="txtlname" placeholder="Enter Last Name" minlength="1" maxlength="45" value="<?php echo $lname; ?>">
 					<label for="" class="control-label"></label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<div class="form-inline">
 						<label>Affiliation</label>
 
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-3">
 					<input type="text" class="form-control" id="txtaffi" name="txtaffi" placeholder="Enter Affiliation / Institution" minlength="1" maxlength="45" value="<?php echo $affi; ?>">
 					<label for="" class="control-label"></label>
 				</div>
-			</div>
+			<!-- </div> -->
 			<!-- Student Check box - START -->
-			<div class="row mar-bot10">
+			<!-- <div class="row mar-bot10"> -->
+
+
+
+			<div class="col-md-2 input-select">
+					<label for="sel_nationality">Nationality <span class="red">*</span></label>
+				</div>
 				<div class="col-md-3">
-					<label for="chk_student" class="mar-left20">Student</label>&nbsp;&nbsp;&nbsp;
-				</div>
-				<div class="col-md-6">
-					<input type="checkbox" name="chk_student" id="chk_student" <?php if ($student == 'Y') {
-																				echo 'checked';
-																			}
-																			?>>
-					<!-- <span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are a Student)</span> -->
-				</div>
-			</div>
-			<!-- Student Check box - END -->
-
-			<div class="row">
-				<div class="col-md-3">
-					<div class="form-inline">
-						<label>Mobile<span class="red">*</span></label>
-
-					</div>
-				</div>
-				<div class="col-md-6">
-					<input type="text" class="form-control" id="txtmobile" name="txtmobile" placeholder="Enter Mobile" minlength="1" maxlength="45" required value="<?php echo $mobile; ?>">
-					<label for="" class="control-label"></label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="form-inline">
-						<label>Alternate Mobile</label>
-
-					</div>
-				</div>
-				<div class="col-md-6">
-					<input type="text" class="form-control" id="txtphone" name="txtphone" placeholder="Enter Alternate Mobile" minlength="1" maxlength="45" value="<?php echo $phone; ?>">
-					<label for="" class="control-label"></label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="form-inline">
-						<label>Primary Email (Not Editable)</label>
-
-					</div>
-				</div>
-				<div class="col-md-6">
-					<input type="text" class="form-control" id="txtemail" name="txtemail" placeholder="Enter Email" minlength="1" maxlength="45" value="<?php echo $email; ?>" disabled>
-					<label for="" class="control-label"></label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="form-inline">
-						<label>Additional Email</label>
-
-					</div>
-				</div>
-				<div class="col-md-6">
-					<input type="text" class="form-control" id="txtaddlemail" name="txtaddlemail" placeholder="Enter Additional E-mail" minlength="1" maxlength="45" onblur="return emailcompare()" value="<?php echo $ademail; ?>">
-					<label for="" class="control-label"></label>
-				</div>
-			</div>
-
-			<div class="row">
-
-				<div class="col-md-3 input-select">
-					<label for="sel_nationality">Select Nationality <span class="red">*</span></label>
-				</div>
-				<div class="col-md-6">
 					<select class="form-select " name="sel_nationality" id="sel_nationality" width="100%" required>
 						<option value="">Select...</option>
 
@@ -514,7 +463,77 @@ if (!isset($_REQUEST["txtFlag"])) {
 					</select>
 				</div>
 
+
+				
 			</div>
+			<!-- Student Check box - END -->
+
+			<div class="row">
+				<div class="col-md-2">
+					<div class="form-inline">
+						<label>Mobile<span class="red">*</span></label>
+
+					</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" id="txtmobile" name="txtmobile" placeholder="Enter Mobile" minlength="1" maxlength="45" required value="<?php echo $mobile; ?>">
+					<label for="" class="control-label"></label>
+				</div>
+			<!-- </div>
+			<div class="row"> -->
+				<div class="col-md-2">
+					<div class="form-inline">
+						<label>Alternate Mobile</label>
+
+					</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" id="txtphone" name="txtphone" placeholder="Enter Alternate Mobile" minlength="1" maxlength="45" value="<?php echo $phone; ?>">
+					<label for="" class="control-label"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<div class="form-inline">
+						<label>Primary Email<BR>(Not Editable)</label>
+
+					</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" id="txtemail" name="txtemail" placeholder="Enter Email" minlength="1" maxlength="45" value="<?php echo $email; ?>" disabled>
+					<label for="" class="control-label"></label>
+				</div>
+			<!-- </div>
+			<div class="row"> -->
+				<div class="col-md-2">
+					<div class="form-inline">
+						<label>Additional Email</label>
+
+					</div>
+				</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" id="txtaddlemail" name="txtaddlemail" placeholder="Enter Additional E-mail" minlength="1" maxlength="45" onblur="return emailcompare()" value="<?php echo $ademail; ?>">
+					<label for="" class="control-label"></label>
+				</div>
+			</div>
+
+			<div class="row mar-top20">
+			<div class="col-md-3">
+					<label for="chk_student" >Student</label>&nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="col-md-6">
+					<input type="checkbox" name="chk_student" id="chk_student" <?php if ($student == 'Y') {
+																					echo 'checked';
+																				}
+																				?>>
+					<span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are a Student)</span>
+				</div>
+			</div>
+
+
+
+
+
 			<div class="row mar-top20">
 				<div class="col-md-3">
 					<label for="chk_iim">IIM Member</label>&nbsp;&nbsp;&nbsp;
@@ -557,10 +576,21 @@ if (!isset($_REQUEST["txtFlag"])) {
 				</div>
 				<div class="col-md-6">
 					<input type="checkbox" name="chk_sfa" id="chk_sfa" <?php if ($sfa == 'Y') {
-																				echo 'checked';
-																			}
-																			?>>
+																			echo 'checked';
+																			} ?>>
 					<span style="font-size:12px"> &nbsp;&nbsp;&nbsp;(Check this if you are an SFA Member)</span>
+				</div>
+			</div>
+			<div class="row mar-top20">
+				<div class="col-md-3">
+					<div class="form-inline">
+						<label>Membership ID</label>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" id="txtmembershipid" name="txtmembershipid" placeholder="Enter Membership ID" minlength="1" maxlength="100" value="<?php echo $membershipID; ?>">
+					<label for="" class="control-label"><span style="font-size:12px;color:grey;font-weight:500;">Enter membership id of any ONE of the Societies</span></label>
 				</div>
 			</div>
 
@@ -574,7 +604,6 @@ if (!isset($_REQUEST["txtFlag"])) {
 		<div class="col-xs-7">
 			<!-- <form method="post" id="form1" class="form-horizontal" action=""> -->
 			<input type="hidden" id="txtFlag" name="txtFlag" onubmit="return jsTrigger();" value="<?php echo $txtFlag ?>" />
-
 			<div class="form-group">
 				<div class="col-xs-8">
 					<div class="form-inline">
@@ -609,9 +638,9 @@ if (!isset($_REQUEST["txtFlag"])) {
 
 	</form>
 	<?php if ($insertflag == "F") {
-		echo '<script>document.getElementById("error").innerHTML = "Contact details could not be added. Please contact Administrator.";</script>';
+		echo '<script>document.getElementById("error").innerHTML = "F Contact details could not be added. Please contact Administrator.";</script>';
 	} else if ($insertflag == "FU") {
-		echo '<script>document.getElementById("error").innerHTML = "Contact details could not be Updated. Please contact Administrator.";</script>';
+		echo '<script>document.getElementById("error").innerHTML = "FU Contact details could not be Updated. Please contact Administrator.";</script>';
 	} else if ($insertflag == "S") {
 		echo '<script>document.getElementById("success").innerHTML = "Contact details Added successfully.";</script>';
 	} else if ($insertflag == "SU") {
