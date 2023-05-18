@@ -638,9 +638,9 @@ if (!isset($_REQUEST["txtFlag"])) {
 
 	</form>
 	<?php if ($insertflag == "F") {
-		echo '<script>document.getElementById("error").innerHTML = "F Contact details could not be added. Please contact Administrator.";</script>';
+		echo '<script>document.getElementById("error").innerHTML = "Contact details could not be added. Please contact Administrator.";</script>';
 	} else if ($insertflag == "FU") {
-		echo '<script>document.getElementById("error").innerHTML = "FU Contact details could not be Updated. Please contact Administrator.";</script>';
+		echo '<script>document.getElementById("error").innerHTML = "Contact details could not be Updated. Please contact Administrator.";</script>';
 	} else if ($insertflag == "S") {
 		echo '<script>document.getElementById("success").innerHTML = "Contact details Added successfully.";</script>';
 	} else if ($insertflag == "SU") {
