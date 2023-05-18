@@ -51,7 +51,8 @@ if (!isset($_SESSION["uid"])) {
                //$expsql = "SELECT u.emsi_id as EMSIID, emauth.au_firstname as FirstName, emauth.au_lastname as LastName, emauth.au_affiliation as Affiliation, (select GROUP_CONCAT(s.su_abstracttitle SEPARATOR ' (o). ') from emsi_submission as s where s.emsi_user_table_ru_id = u.ru_id ) as Abstracts FROM emsi_author_table as emauth, emsi_user_table as u  where  emauth.au_author_type = 'P' and emauth.emsi_user_table_ru_id = u.ru_id";
 
 
-               $expsql = "SELECT B.ic_id as 'id', A.au_firstname as Firstname, A.au_lastname as Lastname, B.ru_userid as Email, A.au_addlemailid as 'Additional Email', A.au_phone as Phone, A.au_mobile as Mobile, REPLACE(A.au_affiliation, ',',' ') as Affiliation, C.na_name as Nationality 
+               $expsql = "SELECT B.ic_id as 'id', A.au_firstname as Firstname, A.au_lastname as Lastname, B.ru_userid as Email, A.au_addlemailid as 'Additional Email', A.au_phone as Phone, A.au_mobile as Mobile, REPLACE(A.au_affiliation, ',',' ') as Affiliation, C.na_name as Nationality,
+               A.au_student, A.au_iim, A.au_isnt, A.au_insis, A.au_sfa, A.au_memberid 
 				 FROM contact_table A, user_table B, nationality C 
 				 WHERE A.user_table_ru_id = B.ru_id 
 				 AND A.au_nationality = C.na_id AND A.au_active = 1 order by B.ic_id";
@@ -136,7 +137,7 @@ if (!isset($_SESSION["uid"])) {
       //   ORDER BY c.user_table_ru_id desc";
 
       $statement = "SELECT B.ic_id as icid, A.au_firstname, A.au_lastname, B.ru_userid as userid, A.au_addlemailid, A.au_phone, A.au_mobile as mobile, A.au_affiliation as affiliation, C.na_name as nationality,
-                  A.au_student, A.au_iim, A.au_isnt, A.au_insis, A.au_sfa
+                  A.au_student, A.au_iim, A.au_isnt, A.au_insis, A.au_sfa, A.au_memberid
                   FROM contact_table A, user_table B, nationality C 
                   WHERE A.user_table_ru_id = B.ru_id
                      AND A.au_nationality = C.na_id
@@ -183,6 +184,7 @@ if (!isset($_SESSION["uid"])) {
                         <th style="vertical-align:middle; text-align:center;">ISNT</th>
                         <th style="vertical-align:middle; text-align:center;">InSIS</th>
                         <th style="vertical-align:middle; text-align:center;">SFA</th>
+                        <th style="vertical-align:middle; text-align:center;">Member ID</th>
                         <!--                           <th style="vertical-align:middle; text-align:center;"width="5%">IIM Member</th>-->
                         <!--<th style="vertical-align:middle; text-align:center;">Abstract</th>-->
 
@@ -205,6 +207,7 @@ if (!isset($_SESSION["uid"])) {
                         <td class="align-center"><?php echo $row['au_isnt']; ?></td>
                         <td class="align-center"><?php echo $row['au_insis']; ?></td>
                         <td class="align-center"><?php echo $row['au_sfa']; ?></td>
+                        <td class="align-center"><?php echo $row['au_memberid']; ?></td>
 
                         <!--          <td><?php //echo $row["Abstracts"]; 
                                           ?> </td>	-->
