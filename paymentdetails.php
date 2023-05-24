@@ -131,6 +131,8 @@ echo trim($_REQUEST["mode"]);
 						<li style="font-weight:600;">For the Amount field, only Numbers and no currency format or special characters allowed.<br>
 							<i>Sample amount format :</i> 2000<br>
 						</li>
+						<li style="font-weight:600;">Registered events can be mentioned in the Comments Field for more clarity.<br>
+						</li>
 						<!-- <li><small class="text-muted">Cheque Payment would be credited only on realisation.<br/></small></li> -->
 					</ul>
 				</div>

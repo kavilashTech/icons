@@ -232,7 +232,8 @@ if (!isset($_SESSION["uid"])) {
 				<p>Notes:</p>
 				<ul>
 
-					<li><small class="text-muted">Sample amount format 2000.<br>Only Numbers and no currency format or special characters allowed.<br /></small></li>
+					<li>Sample amount format 2000.<br>Only Numbers allowed. NO currency format or special characters allowed.<br /></li>
+					<li>Registered events can be mentioned in the Comments Field for more clarity.</li>
 				</ul>
 			</div>
 		</div>
