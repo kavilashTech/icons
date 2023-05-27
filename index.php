@@ -478,7 +478,7 @@ include 'includes/menu.php';
                 </tr>
                 <tr>
                   <td>Submission of manuscript</td>
-                  <td>15<sup>th</sup>&nbsp;&nbsp;June, 2023</td>
+                  <td>30<sup>th</sup>&nbsp;&nbsp;June, 2023</td>
                 </tr>
                 <tr>
                   <td>Communication of review outcome of manuscript</td>
