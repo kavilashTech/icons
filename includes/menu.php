@@ -31,7 +31,7 @@
             <li><a href="index.php#mark-about">About Conference</a></li>
             <li><a href="scope.php">Conference Objectives</a></li>
             <li><a href="organizers.php">Organizers</a></li>
-            <li><a href="organisingcommittee.php">Organizing Committee</a></li>
+            <li><a href="organizingcommittee.php">Organizing Committee</a></li>
             <li><a href="importantdates.php">Important Dates</a></li>
             <li><a href="venue.php">Venue</a></li>
             <li><a href="sponsorship.php">Sponsorship</a></li>
