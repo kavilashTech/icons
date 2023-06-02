@@ -38,7 +38,7 @@ include 'includes/menu.php';
   <div class="col-xs-12">
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
-        <strong>&nbsp;&nbsp;&nbsp;Abstract submission date extended. <a href="importantdates.php"><span style="background-color:darkblue;color:#fff;">Click here for Details.</span></a>&nbsp;&nbsp;Selected submissions will appear in a suitable journal after due peer review process. </strong> &nbsp;&nbsp;&nbsp;
+        <strong>&nbsp;&nbsp;&nbsp;Abstract acceptance will be communicated shortly. &nbsp;&nbsp;|&nbsp;&nbsp;<span style="color:blue">Selected submissions will appear in a suitable journal after due peer review process.</span> </strong> &nbsp;&nbsp;&nbsp;
       </span>
 
       <!-- <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
