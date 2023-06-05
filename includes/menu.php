@@ -81,7 +81,7 @@
             <li><a href="index.php#mark-about">About Conference</a></li>
             <li><a href="scope.php">Conference Objectives</a></li>
             <li><a href="organizers.php">Organizers</a></li>
-            <li><a href="speakerslist.php">Speakers List</a></li>
+            <li><a href="speakerslist.php">Confirmed Speakers</a></li>
             <li><a href="importantdates.php">Important Dates</a></li>
             <li><a href="venue.php">Venue</a></li>
             <li><a href="sponsorship.php">Sponsorship</a></li>
@@ -177,7 +177,7 @@ if ($homepage != $pagename) {
 
 <!-- FLOATING MENU - START -->
 <nav class="floating-menu">
-  <a href="speakerslist.php" style="font-size:18px;font-weight:bold;padding-top:2px">Speakers List</a>
+  <a href="speakerslist.php" style="font-size:18px;font-weight:bold;padding-top:2px">Speakers</a>
   <!-- <a href="importantdates.php">Imp. Dates</a>
   <a href="docs/CF-8_Souvenir.pdf" target="_blank"> Souvenir</a>
   <a href="manuscriptsubmission.php">Submit Manuscript</a> -->

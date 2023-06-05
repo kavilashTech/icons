@@ -209,7 +209,7 @@ include 'includes/menu.php';
           </div>
         </div>
         <h3 class="text-bold">Submissions</h3>
-        <p>Abstract submissions now open!</p>
+        <p>Abstract submissions closed.</p>
 
         <div class="clear"></div>
       </div>
@@ -470,7 +470,7 @@ include 'includes/menu.php';
               <tbody>
                 <tr>
                   <td>Deadline for abstract submission</td>
-                  <td>31<sup>st</sup>&nbsp;&nbsp;May, 2023&nbsp;&nbsp;<span class="badge badge-danger ms-2" style="background-color:red;">Extended</span></td>
+                  <td>31<sup>st</sup>&nbsp;&nbsp;May, 2023</td>
                 </tr>
                 <tr>
                   <td>Acceptance notification</td>

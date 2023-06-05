@@ -25,7 +25,7 @@
               <tbody>
                 <tr>
                   <td>Deadline for abstract submission</td>
-                  <td>31<sup>st</sup>&nbsp;&nbsp;May, 2023&nbsp;&nbsp;<span class="badge badge-danger ms-2" style="background-color:red;">Extended</span></td>
+                  <td>31<sup>st</sup>&nbsp;&nbsp;May, 2023</td>
                 </tr>
                 <tr>
                   <td>Acceptance notification</td>
