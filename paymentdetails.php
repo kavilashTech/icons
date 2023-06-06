@@ -388,9 +388,11 @@ if (isset($_REQUEST["subpayinfo"])) {
 		}
 	}
 */
-
+// $comments = str_replace('\n','',$comments);
+$comments = str_replace(array("\r", "\n"), ' ', $comments);
 	$inssql = "INSERT into payment (pm_mode_of_payment, pm_amount, pm_currency, pm_payment_date, pm_transaction_id, pm_payeebank, pm_branch, pm_comments, user_table_ru_id, pm_active) values ('$pmode', $amount,'$currency', '$paydate', '$transid', '$bank', '$branch', '$comments', " . $_SESSION['uid'] . ", 1)";
-
+// echo $inssql;
+// exit(0);
 	if (mysqli_query($connection, $inssql) == TRUE) {
 		echo '<script>document.getElementById("success").innerHTML = "Added successfully.";
 		document.getElementById("subpayinfo").disabled = true;

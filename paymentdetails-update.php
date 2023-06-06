@@ -257,6 +257,7 @@ if (isset($_REQUEST["subpayinfo"])) {
 
 
 	$paydate = date("Y-m-d", strtotime($paydate));
+	$comments = str_replace(array("\r", "\n"), ' ', $comments);
 
 	$updsql = "UPDATE payment SET pm_mode_of_payment = '$pay', pm_currency='$currency', pm_amount = $amount,  pm_payment_date = '$paydate', pm_transaction_id = '$transid', pm_payeebank = '$bank', pm_branch = '$branch', pm_comments = '$comments', user_table_ru_id = " . $_SESSION['uid'] . ", pm_active = 1 WHERE pm_id = $pmid";
 

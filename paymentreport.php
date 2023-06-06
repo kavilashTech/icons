@@ -49,7 +49,12 @@ if (!isset($_SESSION["uid"])) {
                   // 		and icruser.ru_id = icrpay.icr_user_table_ru_id 
                   // 		ORDER BY icrpay.icr_user_table_ru_id ASC";
 
-                  $expsql = "SELECT user.ru_id, pay.*, contact.au_firstname, contact.au_lastname, contact.au_affiliation 
+                  $expsql = "SELECT user.ic_id, contact.au_firstname as 'First Name', contact.au_lastname as 'Last Name', contact.au_affiliation  as Affiliation,
+                  pay.pm_mode_of_payment as 'Payment Mode', pay.pm_currency as Currency, 
+                  pay.pm_amount as Amount, pay.pm_payment_date as 'Payment Date',
+                  pay.pm_transaction_id as 'Transaction Id',
+                  pay.pm_payeebank as Bank, pay.pm_branch as Branch, pay.pm_comments as Comments
+                  
 FROM payment as pay, contact_table as contact, user_table as user WHERE contact.user_table_ru_id = pay.user_table_ru_id 
 and user.ru_id = pay.user_table_ru_id 
 ORDER BY pay.user_table_ru_id ASC";
@@ -131,7 +136,7 @@ ORDER BY pay.user_table_ru_id ASC";
          //SQL to pick up records
 
          //$sql="SELECT empay.*, eauth.au_firstname, eauth.au_lastname,eauth.au_affiliation FROM `emsi_payment` as empay, emsi_author_table as eauth WHERE eauth.emsi_user_table_ru_id = empay.emsi_user_table_ru_id and eauth.au_author_type = 'P' ORDER BY `empay`.`emsi_user_table_ru_id` ASC";
-         $statement = "SELECT user.ru_id, pay.*, contact.au_firstname, contact.au_lastname, contact.au_affiliation 
+         $statement = "SELECT user.ic_id, pay.*, contact.au_firstname, contact.au_lastname, contact.au_affiliation 
 					FROM payment as pay, contact_table as contact, user_table as user WHERE contact.user_table_ru_id = pay.user_table_ru_id 
 					and user.ru_id = pay.user_table_ru_id 
 					ORDER BY pay.user_table_ru_id ASC";
@@ -151,30 +156,31 @@ ORDER BY pay.user_table_ru_id ASC";
             $sno = 1;
          ?>
             <div class="row justify-content-left">
-               <div class="col-auto">
-                  <table class="table table-responsive tbl-reports">
+               <div class="col-12">
+                  <table class="table table-responsive tbl-reports" style="border-collapse:collapse;table-layout:fixed" width="100%">
                      <thead>
                         <tr style="background-color:grey;color:white; text-align:center;">
-                           <th style="vertical-align:middle; text-align:center;" width="3%" style="vertical-align:center">ICONS ID</th>
-                           <th style="vertical-align:middle; text-align:center;">Name</th>
+                           <th style="vertical-align:middle; text-align:center;" width="10%" style="vertical-align:center">ICONS ID</th>
+                           <th style="vertical-align:middle; text-align:center;" width:17%"">Name</th>
                            <th style=" text-align:center;" width="17%">Affiliation /Institution</th>
                            <th style="vertical-align:middle; text-align:center;">Amount Paid</th>
-                           <th style="vertical-align:middle; text-align:center;">Instrument</th>
-                           <th style="vertical-align:middle; text-align:center;">Transaction Number</th>
+                           <th style="vertical-align:middle; text-align:center;">Instrument, Transaction ID</th>
+                           <!-- <th style="vertical-align:middle; text-align:center;">Transaction Number</th> -->
                            <th style="vertical-align:middle; text-align:center;" width="17%">Payment Date</th>
                            <th style="vertical-align:middle;text-align:center;">Bank, Branch </th>
+                           <th style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;"width="auto">Comments </th>
                         </tr>
                      </thead>
                      <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                         <tr>
-                           <td><?php echo $row['ru_id']; ?></td>
+                           <td><?php echo $row['ic_id']; ?></td>
                            <td><?php echo $row['au_firstname'] . ' ' . $row['au_lastname'] ?></td>
                            <td><?php echo $row['au_affiliation'] ?></td>
                            <td><?php echo $row['pm_currency'] . " " . number_format($row['pm_amount']) ?></td>
-                           <td><?php echo $row['pm_mode_of_payment']?></td>
-                           <td><?php echo $row['pm_transaction_id'] ?></td>
+                           <td><?php echo $row['pm_mode_of_payment']?>,<br><?php echo $row['pm_transaction_id'] ?></td>
                            <td style="padding:8px 7px"><?php echo date("d-m-Y", strtotime($row['pm_payment_date']));  ?></td>
                            <td><?php echo $row['pm_payeebank'] ?>, <?php echo $row['pm_branch'] ?></td>
+                           <td style="word-wrap: break-word;white-space: pre-wrap;"><?php echo $row['pm_comments'] ?></td>
                         </tr>
  
                <?php $sno++;
