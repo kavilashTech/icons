@@ -10,6 +10,7 @@ include 'includes/menu.php';
     <div class="row mar-bot10">
       <div class="col-md-1"></div>
       <div class=" col-md-10">
+        <div class="row">
         <div class="section-header mar-bot30">
           <h2 class="section-heading animated" data-animation="bounceInUp">Venue</h2>
         </div>
@@ -22,7 +23,15 @@ include 'includes/menu.php';
         <div class="">
           <img src="img/mahabs.jpg" style="float:right; margin-left:10px" class="responsive" width="50%" height="auto" alt="">
         </div>
+        </div>
+        <div class="row mar-top30">
+        <div>
+        <p style="text-align:center;font-size:18px;font-weight:bold;">Map of the Venue</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31147.129312771594!2d80.15217317630956!3d12.622324224067775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5254aa30074dc5%3A0x9d00999d9ca8933f!2sMahabalipuram%2C%20Tamil%20Nadu%20603104!5e0!3m2!1sen!2sin!4v1686057568748!5m2!1sen!2sin" width="100%" height="450" style="border:1;border-radius:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+        </div>
       </div>
+      
     </div>
 
     <div class="col-md-1"></div>
