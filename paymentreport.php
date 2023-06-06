@@ -171,66 +171,41 @@ ORDER BY pay.user_table_ru_id ASC";
                            <td><?php echo $row['au_firstname'] . ' ' . $row['au_lastname'] ?></td>
                            <td><?php echo $row['au_affiliation'] ?></td>
                            <td><?php echo $row['pm_currency'] . " " . number_format($row['pm_amount']) ?></td>
-                           <td><?php
-                                 echo $row['pm_mode_of_payment'];
-
-                                 /* switch ($row['pm_mode_of_payment']) {
-                              case 'P':
-                              echo "Institutional Payment";
-                              break;
-                              case 'D':
-                              echo "Demand Draft";
-                              break;
-                              case 'W':
-                              echo "Wire Transfer";
-                              break;
-                              case 'I':
-                              echo "IMPS";
-                              break;
-                              case 'N':
-                              echo "NEFT";
-                              break;
-                              case 'C':
-                              echo "Cheque";
-                              break;
-                              default:
-                                 echo "Mode Of Payment";
-                              break;
-                           } */
-                                 ?></td>
+                           <td><?php echo $row['pm_mode_of_payment']?></td>
                            <td><?php echo $row['pm_transaction_id'] ?></td>
                            <td style="padding:8px 7px"><?php echo date("d-m-Y", strtotime($row['pm_payment_date']));  ?></td>
                            <td><?php echo $row['pm_payeebank'] ?>, <?php echo $row['pm_branch'] ?></td>
                         </tr>
-                        </table>
-                     <?php $sno++;
+ 
+               <?php $sno++;
                      }
                   } else {
 
-                     ?>
-                     <!-- <div class="row ">
+               ?>
+               <!-- <div class="row ">
                         <div class="col-auto"> -->
-                           <table class="table table-responsive tbl-reports">
-                              <tr>
-                                 <td style="text-align:center;color:red;">
-                                    NO Records Found
-                                 </td>
-                              </tr>
-                           </table>
-                           <?php
-                        } ?>
-                          
-                           <?php
-                           echo "<div id='pagingg' align='right' >";
-                           echo pagination($connection, $statement, $limit, $page);
-                           echo "</div>";
-                           ?>
-                        </div>
-                     </div>
+                        </table>
+               <table class="table table-responsive tbl-reports">
+                  <tr>
+                     <td style="text-align:center;color:red;">
+                        NO Records Found
+                     </td>
+                  </tr>
+               </table>
+            <?php
+                  } ?>
+
+            <?php
+            echo "<div id='pagingg' align='right' >";
+            echo pagination($connection, $statement, $limit, $page);
+            echo "</div>";
+            ?>
                </div>
             </div>
       </div>
    </div>
+</div>
+</div>
 
-   <!-- footer -->
-   <?php include 'includes/script.php'; ?>
+<!-- footer -->
+<?php include 'includes/script.php'; ?>
