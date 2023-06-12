@@ -1,5 +1,35 @@
 <!-- Floating menu Style Start ------------------------------------------ -->
 <style>
+  .floating-menu-left {
+    font-family: sans-serif;
+    font-size: 14px;
+    /*background:#6666FF;*/
+    background-color: #153b56;
+    padding: 5px;
+    width: 200px;
+    z-index: 100;
+    float: left;
+    position: fixed;
+    bottom: 60%;
+    left: 0px;
+    border-style: solid solid solid none;
+    border-radius: 6px;
+    border-color: #FFFFFF;
+    border-bottom-width: medium;
+    box-shadow: 0px 0px 30px #060c22;
+  }
+
+  .floating-menu-left a {
+    font-size: 13px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    display: block;
+    margin: 0 0.5em;
+    /*color:#8083FD;*/
+    color: #FFFFFF;
+    padding-bottom: 5px;
+  }
+
+
   .floating-menu {
     font-family: sans-serif;
     font-size: 14px;
@@ -184,3 +214,20 @@ if ($homepage != $pagename) {
 
 </nav>
 <!-- FLOATING MENU - END -->
+
+
+<?php
+if (isset($_SESSION['uid'])) {
+?>
+  <!-- LEFT FLOATING MENU - START -->
+  <nav class="floating-menu-left">
+    <a href="contactinformation.php" style="font-size:18px;font-weight:bold;padding-top:2px">Back to Login Area</a>
+    <!-- <a href="importantdates.php">Imp. Dates</a>
+  <a href="docs/CF-8_Souvenir.pdf" target="_blank"> Souvenir</a>
+  <a href="manuscriptsubmission.php">Submit Manuscript</a> -->
+
+  </nav>
+  <!-- LEFT FLOATING MENU - END -->
+<?php 
+}
+?>

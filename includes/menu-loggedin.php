@@ -19,9 +19,7 @@
   // check wheather current page is index.php or not
   if ($homepage != $pagename) {
 			// echo $pagename;
-			echo '
-			<a href="index.html"><img width="60px;" src="img/logo/icons_logo.png" alt="" ></a>
-		  ';
+			echo '<a href="index.php"><img width="60px;" src="img/logo/icons_logo.png" alt="" ></a>';
   }   ?>
 
       </div>
