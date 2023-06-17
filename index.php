@@ -38,8 +38,9 @@ include 'includes/menu.php';
   <div class="col-xs-12">
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
-      <strong><span style="color:blue">Poster template will be updated shortly&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-        <strong>&nbsp;&nbsp;Abstract acceptance will be communicated shortly. &nbsp;&nbsp;|&nbsp;&nbsp;<span style="color:blue">Selected submissions will appear in a suitable journal after due peer review process.</span> </strong> &nbsp;&nbsp;&nbsp;
+      <strong><span style="color:blue">Poster template will be uploaded shortly&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+        <span style="color:blue">The selected manuscripts will be published in a suitable SCOPUS indexed proceedings after peer review</span> </strong> &nbsp;&nbsp;|&nbsp;&nbsp;
+        <strong>Guidelines for manuscript submission will be posted soon</strong>
       </span>
 
       <!-- <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
