@@ -125,7 +125,7 @@ if (!isset($_SESSION["uid"])) {
       include("pagination/function.php");
       $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
       //$page=1;
-      $limit = 6; //if you want to dispaly 10 records per page then you have to change here
+      $limit = 10; //if you want to dispaly 10 records per page then you have to change here
       $startpoint = ($page * $limit) - $limit;
       //echo $startpoint . "<br>";
       //SQL to pick up records
@@ -177,8 +177,8 @@ if (!isset($_SESSION["uid"])) {
                         <th style="vertical-align:middle; text-align:center;">Name</th>
                         <th style="vertical-align:middle; text-align:center;">Email</th>
                         <th style="vertical-align:middle; text-align:center;">Mobile</th>
-                        <th style="vertical-align:middle; text-align:center;">Nationality</th>
-                        <th style="vertical-align:middle; text-align:center;">Student</th>
+                        <th style="vertical-align:middle; text-align:center;">Nation</th>
+                        <th style="vertical-align:middle; text-align:center;">Stu</th>
                         <th style="vertical-align:middle; text-align:center;">Affiliation</th>
                         <th style="vertical-align:middle; text-align:center;">IIM</th>
                         <th style="vertical-align:middle; text-align:center;">ISNT</th>
@@ -197,12 +197,12 @@ if (!isset($_SESSION["uid"])) {
 
                      <tr>
                         <td><?php echo $row['icid']; ?></td>
-                        <td><?php echo $row['au_firstname'] . ' ' . $row['au_lastname']; ?></td>
+                        <td><?php echo $row['au_firstname'] . '<br>' . $row['au_lastname']; ?></td>
                         <td><?php echo $row['userid']; ?></td>
                         <td><?php echo $row['mobile']; ?></td>
                         <td><?php echo $row['nationality']; ?></td>
                         <td class="align-center"><?php echo $row['au_student']; ?></td>
-                        <td><?php echo $row['affiliation']; ?></td>
+                        <td  style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;"><?php echo $row['affiliation']; ?></td>
                         <td class="align-center"><?php echo $row['au_iim']; ?></td>
                         <td class="align-center"><?php echo $row['au_isnt']; ?></td>
                         <td class="align-center"><?php echo $row['au_insis']; ?></td>
