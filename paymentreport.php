@@ -140,7 +140,7 @@ ORDER BY pay.user_table_ru_id ASC";
 					FROM payment as pay, contact_table as contact, user_table as user WHERE contact.user_table_ru_id = pay.user_table_ru_id 
 					and user.ru_id = pay.user_table_ru_id 
 					ORDER BY pay.user_table_ru_id ASC";
-         echo $statement;
+         // echo $statement;
          // exit(0);
 
          $strTest = "{$statement} LIMIT {$limit} OFFSET {$startpoint}";
