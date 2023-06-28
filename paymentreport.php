@@ -115,11 +115,11 @@ ORDER BY pay.user_table_ru_id ASC";
          </div>
       </div>
       <div class="container-fluid">
-         <div class="row">
+         <!-- <div class="row">
             <div class="col-sm-6"></div>
             <div class="col-sm-6">
 
-            </div>
+            </div> -->
          </div>
 
 
@@ -140,7 +140,7 @@ ORDER BY pay.user_table_ru_id ASC";
 					FROM payment as pay, contact_table as contact, user_table as user WHERE contact.user_table_ru_id = pay.user_table_ru_id 
 					and user.ru_id = pay.user_table_ru_id 
 					ORDER BY pay.user_table_ru_id ASC";
-         // echo $statement;
+         echo $statement;
          // exit(0);
 
          $strTest = "{$statement} LIMIT {$limit} OFFSET {$startpoint}";
@@ -156,31 +156,31 @@ ORDER BY pay.user_table_ru_id ASC";
             $sno = 1;
          ?>
             <div class="row justify-content-left">
-               <div class="col-12">
+               <div>
                   <table class="table table-responsive tbl-reports" style="border-collapse:collapse;table-layout:fixed" width="100%">
                      <thead>
                         <tr style="background-color:grey;color:white; text-align:center;">
                            <th style="vertical-align:middle; text-align:center;" width="10%" style="vertical-align:center">ICONS ID</th>
                            <th style="vertical-align:middle; text-align:center;" width:17%"">Name</th>
-                           <th style=" text-align:center;" width="17%">Affiliation /Institution</th>
-                           <th style="vertical-align:middle; text-align:center;">Amount Paid</th>
-                           <th style="vertical-align:middle; text-align:center;">Instrument, Transaction ID</th>
+                           <th style=" text-align:center;" width="10%">Affiliation<br> /Institution</th>
+                           <th style="vertical-align:middle; text-align:center;" width="10%">Amount<br>Date</th>
+                           <th style="vertical-align:middle; text-align:center;" width="15%">Instrument,<br>Transaction ID</th>
                            <!-- <th style="vertical-align:middle; text-align:center;">Transaction Number</th> -->
-                           <th style="vertical-align:middle; text-align:center;" width="17%">Payment Date</th>
-                           <th style="vertical-align:middle;text-align:center;">Bank, Branch </th>
-                           <th style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;"width="auto">Comments </th>
+                           <!-- <th style="vertical-align:middle; text-align:center;" width="17%">Payment Date</th> -->
+                           <th style="vertical-align:middle;text-align:center;" width="15%">Bank, Branch </th>
+                           <th style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;">Comments </th>
                         </tr>
                      </thead>
                      <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                         <tr>
-                           <td><?php echo $row['ic_id']; ?></td>
-                           <td><?php echo $row['au_firstname'] . ' ' . $row['au_lastname'] ?></td>
-                           <td><?php echo $row['au_affiliation'] ?></td>
-                           <td><?php echo $row['pm_currency'] . " " . number_format($row['pm_amount']) ?></td>
-                           <td><?php echo $row['pm_mode_of_payment']?>,<br><?php echo $row['pm_transaction_id'] ?></td>
-                           <td style="padding:8px 7px"><?php echo date("d-m-Y", strtotime($row['pm_payment_date']));  ?></td>
-                           <td><?php echo $row['pm_payeebank'] ?>, <?php echo $row['pm_branch'] ?></td>
-                           <td style="word-wrap: break-word;white-space: pre-wrap;"><?php echo $row['pm_comments'] ?></td>
+                           <td style="vertical-align:middle; text-align:center;"><?php echo $row['ic_id']; ?></td>
+                           <td style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;"><?php echo $row['au_firstname'] . ' ' . $row['au_lastname'] ?></td>
+                           <td style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;"><?php echo $row['au_affiliation'] ?></td>
+                           <td><?php echo $row['pm_currency'] . " " . number_format($row['pm_amount']) ?><br><?php echo date("d-m-Y", strtotime($row['pm_payment_date']));  ?></td>
+                           <td style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;"><?php echo $row['pm_mode_of_payment']?>,<br><?php echo $row['pm_transaction_id'] ?></td>
+                           <!-- <td width="10%"></td> -->
+                           <td style="vertical-align:middle;text-align:center;word-wrap: break-word;white-space: pre-wrap;"><?php echo $row['pm_payeebank'] ?>, <?php echo $row['pm_branch'] ?></td>
+                           <td style="word-wrap: break-word;white-space: pre-wrap;" width="20%"><?php echo $row['pm_comments'] ?></td>
                         </tr>
  
                <?php $sno++;
