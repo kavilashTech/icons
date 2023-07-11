@@ -89,6 +89,7 @@ if (isset($_POST['txtSubmit'])) {
 
 <div class="container" id="main">
   <div class="container-fluid pt-2">
+    <p class="align-center" style="font-size:14px;color:white;font-weight:bold;"><badge style="background-color:red">&nbsp;&nbsp;Abstract Submission Closed.&nbsp;&nbsp;</badge></p>
     <p style="font-size:12px">All Fields marked with <span class="red">*</span> are mandatory</p>
     <!-- <form method="post" id="form1" class="form-horizontal" action=""> -->
     <div class="row">
@@ -109,12 +110,12 @@ if (isset($_POST['txtSubmit'])) {
         <!-- end -->
 
         <label for="abfile_name">Abstract Title <span style="color:red;">*</span></label>
-        <input type="text" class="form-control" id="abfile_name" name="abfile_name" maxlength="150" required>
+        <input type="text" class="form-control" id="abfile_name" name="abfile_name" maxlength="150" disabled>
 
         <div class="form-group required">
           <!-- <div class="form-inline"> -->
           <label for="abfile_select_t1">Select a Topic <span style="color:red;">*</span></label>
-          <select class="custom-select form-control" name="abfile_select_t1" id="abfile_select_t1" required>
+          <select class="custom-select form-control" name="abfile_select_t1" id="abfile_select_t1" disabled>
             <option value="">Select...</option>
             <?php
             $sql = "SELECT * FROM topics where to_active='A' ORDER BY to_id";
@@ -142,7 +143,7 @@ if (isset($_POST['txtSubmit'])) {
 
         <label for="fileToUpload">Upload your Abstract <span style="color:red;">*</span><br><span style="color:blue;font-size:12px;">(Number of characters in Filename should not exceed <b>50</b>. No Special Characters Allowed in Filename.)</span></label>
         <div class="custom-file">
-          <input type="file" class=" form-control" name="fileToUpload" id="fileToUpload" style="width:100%;" accept=".doc,.docx, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+          <input type="file" class=" form-control" name="fileToUpload" id="fileToUpload" style="width:100%;" accept=".doc,.docx, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" disabled>
         </div>
 
         <label id="FileError" for="fileToUpload" class="control-label" style="margin-left:-3%"></label>
@@ -153,7 +154,7 @@ if (isset($_POST['txtSubmit'])) {
             </div>
             <div class="col-sm-4">
               <label id="ErrMessage" style="color:red !important;font-weight:600;"></label>
-              <input type="submit" class="form-control btn-primary" value=<?php echo $submitBtnText;  ?> id="subfupload" name="subfupload">
+              <input type="submit" class="form-control btn-primary" value=<?php echo $submitBtnText;  ?> id="subfupload" name="subfupload" disabled>
             </div>
           </div>
           <p>Note:</p>
