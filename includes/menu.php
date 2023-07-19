@@ -115,6 +115,7 @@
             <li><a href="importantdates.php">Important Dates</a></li>
             <li><a href="venue.php">Venue</a></li>
             <li><a href="sponsorship.php">Sponsorship</a></li>
+            
           </ul>
         </li>
         <li><a href="organizingcommittee.php">Organizing Committee</a></li>
@@ -131,16 +132,16 @@
 
           </ul>
         </li>
+        <li><a href="sponsors.php">Sponsors</a></li>
 
-
-        <li class="dropdown">
+        <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Submission <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="abstractguidelines.php">Abstract Guidelines</a></li>
             <li><a href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a></li>
             <li><a href="howtosubmit.php">How to Submit Abstract</a></li>
           </ul>
-        </li>
+        </li> -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Registration <span class="caret"></span></a>
           <ul class="dropdown-menu">
