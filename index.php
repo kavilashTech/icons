@@ -39,8 +39,8 @@ include 'includes/menu.php';
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:blue;"><img src="img/new1.gif" height="25px" width="35px">
       <strong><span style="color:blue">Decision on abstract acceptance has been communicated via email. If no communication is received, please write to us at icons@igcar.gov.in.&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-      <strong><span style="color:blue">Poster template will be uploaded shortly&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-      <strong>Manuscript template is available in 'Downloads'&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
+      <strong><span style="color:blue">Poster template is available under Downloads&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+      <!-- <strong>Manuscript template is available in 'Downloads'&nbsp;&nbsp;|&nbsp;&nbsp;</strong> -->
         <strong><span style="color:blue">Selected manuscripts will be published as a special issue in Procedia Structural Integrity or Materials Today: Proceedings (Elsevier Publications) after peer-review</span> </strong> 
         
       </span>

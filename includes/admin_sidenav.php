@@ -9,7 +9,7 @@
     <a id="side_menu" href="paymentcalculation.php">Payment Calculation</a>
     <a id="side_menu" href="paymentdetails.php">Payment Details</a>
     <a id="side_menu" href="abstractupload.php">Submit Abstract</a>
-    <a id="side_menu" href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a>
+    <!-- <a id="side_menu" href="docs/ICONS2023_draft_Abstract_template.docx">Download Abstract Template</a> -->
     <?php
     if ($_SESSION['category'] == 'A') {
     ?>
