@@ -187,7 +187,7 @@ if (mysqli_num_rows($arow) > 0) {
 			userCountry = "US";
 			currency = "USD";
 
-			confFees = 400;
+			confFees = 500;
 			spouseFees = 200;
 			studentFees = 200;
 
@@ -306,8 +306,8 @@ if (mysqli_num_rows($arow) > 0) {
 			var confFlag = 0;
 			var preconfFlag = 0;
 			var spouseFlag = 0;
-
-
+			confFees = 500;
+			spouseFees = 250;
 
 			if (document.getElementById("chk_conference").checked == true) {
 				// totalFees = 12000;
