@@ -162,20 +162,21 @@ if (mysqli_num_rows($arow) > 0) {
 			userCountry = "IN";
 			currency = "INR";
 
-			confFees = 12000;
-			memberFees = 10000;
-			spouseFees = 5000;
-			studentFees = 5000;
+			confFees = 13200;
+			memberFees = 11000;
+			spouseFees = 5500;
+			studentFees = 5500;
 
 
-			preConf1 = 2000;
-			preConf2 = 2000;
+			preConf1 = 2200;
+			preConf2 = 2200;
 
 			var isMember = document.getElementById("isMember").value;
 			if (isMember == 'Y') {
 				confFees = memberFees;
 			}
 			var isStudent = document.getElementById("isStudent").value;
+			// var isStudent = $student;
 			if (isStudent == 'YES') {
 				confFees = studentFees;
 			}
@@ -188,13 +189,17 @@ if (mysqli_num_rows($arow) > 0) {
 			currency = "USD";
 
 			confFees = 500;
-			spouseFees = 200;
-			studentFees = 200;
+			spouseFees = 250;
+			studentFees = 250;
 
 			var isStudent = document.getElementById("isStudent").value;
+			alert(isStudent);
+			// var isStudent = $student;
+			
 			if (isStudent == 'YES') {
 				confFees = studentFees;
 			}
+			alert('conf' + confFees);
 
 		}
 
@@ -209,19 +214,19 @@ if (mysqli_num_rows($arow) > 0) {
 
 
 			if (document.getElementById("chk_conference").checked == true) {
-				// totalFees = 12000;
+				// totalFees = 13200;
 				confFlag = 1;
 			}
 			if (document.getElementById("chk_preconference1").checked == true) {
-				// totalFees = totalFees += 2000;
+				// totalFees = totalFees += 2200;
 				preconfFlag1 = 1;
 			}
 			if (document.getElementById("chk_preconference2").checked == true) {
-				// totalFees = totalFees += 2000;
+				// totalFees = totalFees += 2200;
 				preconfFlag2 = 1;
 			}
 			if (document.getElementById("chk_spouse").checked == true) {
-				// totalFees = totalFees += 5000;
+				// totalFees = totalFees += 5500;
 				spouseFlag = 1;
 			}
 
@@ -254,7 +259,7 @@ if (mysqli_num_rows($arow) > 0) {
 			//Calculate discount for Pre-conf
 			//User should have opted for Conference
 			//User should have opted for both the pre-conf
-// alert(confFlag + ' ' + preconfFlag1 + ' ' + preconfFlag2);
+			// alert(confFlag + ' ' + preconfFlag1 + ' ' + preconfFlag2);
 			if (confFlag == 1) {
 				if (preconfFlag1 == 1 && preconfFlag2 == 1){
 					// alert("both conference selected");
@@ -306,7 +311,7 @@ if (mysqli_num_rows($arow) > 0) {
 			var confFlag = 0;
 			var preconfFlag = 0;
 			var spouseFlag = 0;
-			confFees = 500;
+			// confFees = 500;
 			spouseFees = 250;
 
 			if (document.getElementById("chk_conference").checked == true) {
@@ -403,8 +408,8 @@ if (mysqli_num_rows($arow) > 0) {
 	<h5 id="error" class="pull-right" style="color:red;"></h5>
 </div>
 
-<input type="hidden" id="isStudent" value="<?php echo $student ?>">
-<input type="hidden" id="isMember" value="<?php echo $isMember ?>">
+<input type="text" id="isStudent" value="<?php echo $student ?>">
+<input type="text" id="isMember" value="<?php echo $isMember ?>">
 
 
 <!-- Header area end -->
