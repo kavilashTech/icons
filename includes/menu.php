@@ -96,7 +96,7 @@
       if ($homepage != $pagename) {
         // echo $pagename;
         echo '
-			<a href="index.html"><img width="60px;" src="img/logo/icons_logo.png" alt="" ></a>
+			<a href="index.php"><img width="60px;" src="img/logo/icons_logo.png" alt="" ></a>
 		  ';
       }   ?>
 
@@ -114,11 +114,11 @@
             <li><a href="speakerslist.php">Confirmed Speakers</a></li>
             <li><a href="importantdates.php">Important Dates</a></li>
             <li><a href="venue.php">Venue</a></li>
-            <li><a href="sponsorship.php">Sponsorship</a></li>
+            <li><a href="sponsorship.php">Sponsors & Partners</a></li>
             
           </ul>
         </li>
-        <li><a href="organizingcommittee.php">Organizing Committee</a></li>
+        <li><a href="organizingcommittee.php">Committee</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Downloads <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -134,7 +134,7 @@
 
           </ul>
         </li>
-        <li><a href="sponsors.php">Sponsors</a></li>
+        <li><a href="sponsors.php">Sponsors & Partners</a></li>
 
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Submission <span class="caret"></span></a>
