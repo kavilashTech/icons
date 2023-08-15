@@ -123,13 +123,14 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Downloads <span class="caret"></span></a>
           <ul class="dropdown-menu">
             
-            <!-- <li><a href="docs/ICONS23_Paper_template.docx" title="ICONS 2023" target="_blank">Manuscript Template&nbsp;<img width="20px" src="img/badge-new.png"></a></li> -->
+            <li><a href="docs/Technical_Program.pdf" title="ICONS 2023" target="_blank">Technical Program&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
+            <li><a href="docs/Technical_schedule.pdf" title="ICONS 2023" target="_blank">Technical Schedule&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
             <li><a href="docs/ICONS_2023_Brochure_03Aug23.pdf" title="ICONS 2023" target="_blank">Conference Brochure</a></li>
             <li><a href="docs/ICONS2023-Flyer_1.pdf" target="_blank">Conference Flyer</a></li>
             <!-- <li><a href="docs/ICONS2023_Brochure_02June23.pdf" target="_blank">Final Announcement</a></li> -->
             <li><a href="docs/Pre_Conference_Workshop_FFASC_23_04August.pdf" target="_blank">Pre-Conf. Workshop-1</a></li>
             <li><a href="docs/ICONS 2023_PreWS_LSC_04Aug2023.pdf" target="_blank">Pre-Conf. Workshop-2&nbsp;</a></li>
-            <li><a href="docs/poster_template.pdf" title="ICONS 2023" target="_blank">Poster Template&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
+            <li><a href="docs/poster_template.pdf" title="ICONS 2023" target="_blank">Poster Template&nbsp;</a></li>
 
 
           </ul>
