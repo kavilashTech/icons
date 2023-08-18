@@ -39,7 +39,7 @@ include 'includes/menu.php';
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:blue;"><img src="img/new1.gif" height="25px" width="35px">
       <!-- <strong><span style="color:blue">Early bird registration is open till 10 August 2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong> -->
-      <strong><span style="color:blue">Poster template is available under Downloads&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+      <strong><span style="color:blue">Poster session details are available under Downloads&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
       <strong>Technical Schedule is available under Downloads&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
         <strong><span style="color:blue">Manuscript submission guidelines and submission details will be updated shortly</span> </strong> 
         

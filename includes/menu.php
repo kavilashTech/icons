@@ -131,6 +131,9 @@
             <li><a href="docs/Pre_Conference_Workshop_FFASC_23_04August.pdf" target="_blank">Pre-Conf. Workshop-1</a></li>
             <li><a href="docs/ICONS 2023_PreWS_LSC_04Aug2023.pdf" target="_blank">Pre-Conf. Workshop-2&nbsp;</a></li>
             <li><a href="docs/poster_template.pdf" title="ICONS 2023" target="_blank">Poster Template&nbsp;</a></li>
+            <li><a href="docs/Poster Session-1.pdf" title="ICONS 2023" target="_blank">Poster Session 1&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
+            <li><a href="docs/Poster Session-2.pdf" title="ICONS 2023" target="_blank">Poster Session 2&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
+            
 
 
           </ul>
