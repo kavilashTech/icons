@@ -123,8 +123,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Downloads <span class="caret"></span></a>
           <ul class="dropdown-menu">
             
-            <li><a href="docs/Technical_Program_v2.pdf" title="ICONS 2023" target="_blank">Technical Program&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
-            <li><a href="docs/Technical_schedule_v2.pdf" title="ICONS 2023" target="_blank">Technical Schedule&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
+            <li><a href="docs/Technical_Program.pdf" title="ICONS 2023" target="_blank">Technical Program&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
+            <li><a href="docs/Technical_schedule.pdf" title="ICONS 2023" target="_blank">Technical Schedule&nbsp;<img width="20px" src="img/badge-new.png"></a></li>
             <li><a href="docs/ICONS_2023_Brochure_03Aug23.pdf" title="ICONS 2023" target="_blank">Conference Brochure</a></li>
             <li><a href="docs/ICONS2023-Flyer_1.pdf" target="_blank">Conference Flyer</a></li>
             <!-- <li><a href="docs/ICONS2023_Brochure_02June23.pdf" target="_blank">Final Announcement</a></li> -->
