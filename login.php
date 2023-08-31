@@ -45,9 +45,9 @@
 							<div class="mar-left10 pull-left">
 								<p><a href="forgotpassword.php" style="color:#041554;"><b>Forgot Password?</b></a></p>
 							</div>
-							<div class="mar-right10 pull-right">
+							<!-- <div class="mar-right10 pull-right">
 								<p><b><a href="signup.php">Sign-up Here.</a></b></p>
-							</div>
+							</div> -->
 						</div>
 
 						<!-- <div class="row">

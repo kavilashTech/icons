@@ -38,10 +38,10 @@ include 'includes/menu.php';
   <div class="col-xs-12">
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:blue;"><img src="img/new1.gif" height="25px" width="35px">
-      <!-- <strong><span style="color:blue">Early bird registration is open till 10 August 2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong> -->
-      <strong><span style="color:blue">Poster session details are available under Downloads&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-      <strong>Technical Schedule is available under Downloads&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
-        <strong><span style="color:blue">Manuscript submission guidelines and submission details will be updated shortly</span> </strong> 
+      <strong><span style="color:blue">Thank you for participating in ICONS-2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+      <strong><span style="color:blue">Manuscript submission date has been extended to 30 September 2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+      <strong>Authors are requested to prepare the manuscripts in accordance with the guidelines of Procedia Structural integrity (of Elsevier)&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
+        <strong><span style="color:blue">Provision for submission will be updated here shortly, please keep watching this space</span> </strong> 
         
       </span>
 

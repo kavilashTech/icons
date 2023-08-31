@@ -153,7 +153,7 @@
           <ul class="dropdown-menu">
             <!-- <li><a href="registrationguidelines.php">Registration Guidelines</a></li> -->
             <li><a href="registrationfees.php">Registration Fees</a></li>
-            <li role="separator" class="divider"></li>
+            <!-- <li role="separator" class="divider"></li> -->
 
             <?php
             if (!isset($_SESSION['uid'])) {  // if not signed in
@@ -161,9 +161,9 @@
               // echo '<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button"
               // aria-expanded="false">Signup <span class="caret"></span></a>';
               // echo '<ul class="dropdown-menu">';
-              echo '<li><a href="#">Signup information</a></li>';
+              // echo '<li><a href="#">Signup information</a></li>';
               // echo '<li><a href="#">Signup FAQ</a></li>';
-              echo '<li><a href="signup.php">Sign Up</a></li>';
+              // echo '<li><a href="signup.php">Sign Up</a></li>';
               // echo '<li><a href="login.php">Login</a></li>';
               // echo '</ul>
               // </li>';
