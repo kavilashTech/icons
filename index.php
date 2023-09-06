@@ -53,14 +53,14 @@ include 'includes/menu.php';
   </div>
 </section>
 <!--- Marquee section Ends -->
-<div class="container mar-bot30">
+<div class="container mar-bot30" style="border:2px solid green;padding:8px;width:60%;border-radius:5px;">
   <div class="row">
     <div class="col-10 align-center">
       <h2><span style="color:blue;font-weight:bold;">Thank you for attending ICONS-2023!</h2>
       <h4><span style="line-height:30px;font-weight:600;">We congratulate the following participants<br>for securing awards for their contributory talks/posters:</span></h4>
     </div>
   </div>
-  <div class="row" style="margin-left:20%;margin-right:20%;border:2px solid orange;border-radius:5px;padding-top:6px;background-color:beige">
+  <div class="row" style="margin-left:10%;margin-right:10%;border:2px solid orange;border-radius:5px;padding-top:6px;background-color:beige">
     <div class="col-sm-6">
     <h4 style="text-align:center;font-weight:800">&nbsp;Oral&nbsp;</h4>
       <p  style="font-size:16px;color:blue;text-align:center">
