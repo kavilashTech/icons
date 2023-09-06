@@ -38,11 +38,11 @@ include 'includes/menu.php';
   <div class="col-xs-12">
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:blue;"><img src="img/new1.gif" height="25px" width="35px">
-      <strong><span style="color:blue">Thank you for participating in ICONS-2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-      <strong><span style="color:blue">Manuscript submission date has been extended to 30 September 2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-      <strong>Authors are requested to prepare the manuscripts in accordance with the guidelines of Procedia Structural integrity (of Elsevier)&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
-        <strong><span style="color:blue">Provision for submission will be updated here shortly, please keep watching this space</span> </strong> 
-        
+        <strong><span style="color:blue">Thank you for participating in ICONS-2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+        <strong><span style="color:blue">Manuscript submission date has been extended to 30 September 2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+        <strong>Authors are requested to prepare the manuscripts in accordance with the guidelines of Procedia Structural integrity (of Elsevier)&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
+        <strong><span style="color:blue">Provision for submission will be updated here shortly, please keep watching this space</span> </strong>
+
       </span>
 
       <!-- <span style="color:red;"><img src="img/new1.gif" height="25px" width="35px">
@@ -53,7 +53,32 @@ include 'includes/menu.php';
   </div>
 </section>
 <!--- Marquee section Ends -->
-
+<div class="container mar-bot30">
+  <div class="row">
+    <div class="col-10 align-center">
+      <h2><span style="color:blue;font-weight:bold;">Thank you for attending ICONS-2023!</h2>
+      <h4><span style="line-height:30px;font-weight:600;">We congratulate the following participants<br>for securing awards for their contributory talks/posters:</span></h4>
+    </div>
+  </div>
+  <div class="row" style="margin-left:20%;margin-right:20%;border:2px solid orange;border-radius:5px;padding-top:6px;background-color:beige">
+    <div class="col-sm-6">
+    <h4 style="text-align:center;font-weight:800">&nbsp;Oral&nbsp;</h4>
+      <p  style="font-size:16px;color:blue;text-align:center">
+      V Venkatesh, CSIR-NML<br>
+      Ashish Pandey, IIT Madras<br>
+      Ran Vijay Kumar, IGCAR
+      </p>
+    </div>
+    <div class="col-sm-6 align-right">
+      <h4 style="text-align:center;font-weight:800">Poster</h4>
+      <p  style="font-size:16px;color:blue;text-align:center">
+      Ashish Kumar, IGCAR<br>
+      R Duraipandi, HBNI Kalpakkam<br>
+      Anupoju Rajeev, IIT Bombay
+      </p>
+    </div>
+  </div>
+</div>
 
 <!-- slider -->
 <!-- Carousel Default -->
@@ -224,7 +249,7 @@ include 'includes/menu.php';
 
     </div>
     <div class="row">
-    <div class="col-lg-4">
+      <div class="col-lg-4">
         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
           <div class="float-left mar-right20">
             <a href="#" onclick="return false" class="hi-icon hi-icon-screen">screen</a>
@@ -239,7 +264,7 @@ include 'includes/menu.php';
       <div class="col-lg-4">
         <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
           <div class="float-left mar-right20">
-            <a href="#" onclick="return false"  class="hi-icon hi-icon-clock">location</a>
+            <a href="#" onclick="return false" class="hi-icon hi-icon-clock">location</a>
           </div>
         </div>
         <h3 class="text-bold">Schedule</h3>
@@ -470,27 +495,27 @@ include 'includes/menu.php';
           <h2 class="section-heading animated" data-animation="bounceInUp">Important Dates</h2>
         </div>
         <div class="table-responsive">
-        <table class="table table-striped table-bordered">
-              <thead>
-                <tr class="purple-row">
-                  <th></th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Deadline for abstract submission</td>
-                  <td>31<sup>st</sup>&nbsp;&nbsp;May, 2023</td>
-                </tr>
-                <tr>
-                  <td>Acceptance notification</td>
-                  <td>15<sup>th</sup>&nbsp;&nbsp;June, 2023</td>
-                </tr>
-                <tr>
-                  <td>Submission of manuscript</td>
-                  <td>31<sup>st</sup>&nbsp;&nbsp;August, 2023</td>
-                </tr>
-                <!-- <tr>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr class="purple-row">
+                <th></th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Deadline for abstract submission</td>
+                <td>31<sup>st</sup>&nbsp;&nbsp;May, 2023</td>
+              </tr>
+              <tr>
+                <td>Acceptance notification</td>
+                <td>15<sup>th</sup>&nbsp;&nbsp;June, 2023</td>
+              </tr>
+              <tr>
+                <td>Submission of manuscript</td>
+                <td>31<sup>st</sup>&nbsp;&nbsp;August, 2023</td>
+              </tr>
+              <!-- <tr>
                   <td>Communication of review outcome of manuscript</td>
                   <td>15<sup>th</sup>&nbsp;&nbsp;July, 2023</td>
                 </tr>
@@ -498,12 +523,12 @@ include 'includes/menu.php';
                   <td>Submission of revised camera-ready manuscripts</td>
                   <td>31<sup>st</sup>&nbsp;&nbsp;July, 2023</td>
                 </tr> -->
-                <tr>
-                  <td>Conference dates</td>
-                  <td>23 - 25 August, 2023</td>
-                </tr>
-              </tbody>
-            </table>
+              <tr>
+                <td>Conference dates</td>
+                <td>23 - 25 August, 2023</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="col-md-1"></div>
