@@ -53,7 +53,7 @@ include 'includes/menu.php';
   </div>
 </section>
 <!--- Marquee section Ends -->
-<div class="container mar-bot30" style="border:2px solid green;padding:8px;width:60%;border-radius:5px;">
+<div class="container mar-bot30" style="border:2px solid green;padding:8px;width:60%;border-radius:5px;box-shadow: 5px 5px 5px black">
   <div class="row">
     <div class="col-10 align-center">
       <h2><span style="color:blue;font-weight:bold;">Thank you for attending ICONS-2023!</h2>
