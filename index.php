@@ -38,10 +38,10 @@ include 'includes/menu.php';
   <div class="col-xs-12">
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
       <span style="color:blue;"><img src="img/new1.gif" height="25px" width="35px">
-        <strong><span style="color:blue">Thank you for participating in ICONS-2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-        <strong><span style="color:blue">Manuscript submission date has been extended to 30 September 2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
-        <strong>Authors are requested to prepare the manuscripts in accordance with the guidelines of Procedia Structural integrity (of Elsevier)&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
-        <strong><span style="color:blue">Provision for submission will be updated here shortly, please keep watching this space</span> </strong>
+        <strong><span style="color:blue">We thank all sponsors, exhibitors, and advertisers for helping to make ICONS-2023 a grand success!&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+        <strong><span style="color:blue">Manuscript submission date has been extended to 31 October 2023&nbsp;&nbsp;|&nbsp;&nbsp;</span></strong>
+        <strong>Manuscript submission template is available under Downloads&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
+        <strong><span style="color:blue">Please submit manuscripts only through the link provided on the homepage</span> </strong>
 
       </span>
 
@@ -57,6 +57,9 @@ include 'includes/menu.php';
   <div class="row">
     <div class="col-10 align-center">
       <h2><span style="color:blue;font-weight:bold;">Thank you for attending ICONS-2023!</h2>
+      <h4><span style="color:blue;font-weight:500;text-align:center;line-height:25px;">Manuscripts prepared as per the template (available in <b>Downloads</b>)<br>may be submitted at: <a href="https://forms.gle/RemmRAHgpAmaGQEa9" target="_blank">https://forms.gle/RemmRAHgpAmaGQEa9</a></span></h4>
+      <h4><span style="font-weight:800">Last date for manuscript submission is 31 October 2023</span></h4>
+      <hr style="border:2px solid red;margin:10px 80px;">
       <h4><span style="line-height:30px;font-weight:600;">We congratulate the following participants<br>for securing awards for their contributory talks/posters:</span></h4>
     </div>
   </div>
@@ -97,7 +100,7 @@ include 'includes/menu.php';
             <div class="intro-content">
               <div class="row slider-row">
 
-                <div class="col-md-10 slider-box">
+                <div class="col-md-10">
                   <!-- <div> -->
                   <h1>ICONS <span>2023</span></h1>
                   <h2>3rd International Conference on Structural Integrity</h2>
@@ -134,7 +137,7 @@ include 'includes/menu.php';
           <div id="intro" style="background-image: url('./img/slide-2.jpg');">
             <div class="intro-content">
               <div class="row slider-row">
-                <div class="col-md-10">
+                <div class="col-md-10 slider-box">
                   <!-- <div> -->
                   <h1>ICONS <span>2023</span></h1>
                   <h2>3rd International Conference on Structural Integrity</h2>
@@ -513,7 +516,7 @@ include 'includes/menu.php';
               </tr>
               <tr>
                 <td>Submission of manuscript</td>
-                <td>31<sup>st</sup>&nbsp;&nbsp;August, 2023</td>
+                <td>31<sup>st</sup>&nbsp;&nbsp;October, 2023</td>
               </tr>
               <!-- <tr>
                   <td>Communication of review outcome of manuscript</td>
