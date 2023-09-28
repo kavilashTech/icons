@@ -101,14 +101,12 @@ include 'includes/menu.php';
               <div class="row slider-row">
 
                 <div class="col-md-10 slider-box">
-                  <!-- <div> -->
                   <h1>ICONS <span>2023</span></h1>
                   <h2>3rd International Conference on Structural Integrity</h2>
                   <h2>23 - 25 August, 2023</h2>
                   <div>
                     <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
                   </div>
-                  <!-- </div> -->
                 </div>
               </div>
             </div>

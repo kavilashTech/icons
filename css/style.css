@@ -806,8 +806,8 @@ ul.dropdown-menu li a {
 }
 
 .intro-content {
-  /* background: rgba(0, 0, 0, 0.1); */
-  position: relative;
+  display:none;
+  /* position: relative;
   bottom: 0;
   top: 0;
   left: 0;
@@ -817,8 +817,7 @@ ul.dropdown-menu li a {
   justify-content: left;
   align-items: left;
   flex-direction: column;
-  text-align: left;
-  /* padding: 0 15px; */
+  text-align: left; */
 
 }
 
