@@ -96,26 +96,7 @@ include 'includes/menu.php';
       <div class="carousel-inner" role="listbox">
         <!-- NOTE: Bootstrap v4 changes class name to carousel-item -->
         <div class="item active">
-          <div id="intro" style="background-image: url('./img/slide-5.jpg');">
-            <div class="intro-content">
-              <div class="row slider-row">
-
-                <div class="col-md-10">
-                  <!-- <div> -->
-                  <h1>ICONS <span>2023</span></h1>
-                  <h2>3rd International Conference on Structural Integrity</h2>
-                  <h2>23 - 25 August, 2023</h2>
-                  <div>
-                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
-                  </div>
-                  <!-- </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div id="intro" style="background-image: url('./img/slide-1.JPG');">
+          <div id="intro" style="background-image: url('./img/slider/slider1.jpg');">
             <div class="intro-content">
               <div class="row slider-row">
 
@@ -134,7 +115,26 @@ include 'includes/menu.php';
           </div>
         </div>
         <div class="item">
-          <div id="intro" style="background-image: url('./img/slide-2.jpg');">
+          <div id="intro" style="background-image: url('./img/slider/slider2.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10 slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider3.jpg');">
             <div class="intro-content">
               <div class="row slider-row">
                 <div class="col-md-10 slider-box">
@@ -152,11 +152,11 @@ include 'includes/menu.php';
           </div>
         </div>
         <div class="item">
-          <div id="intro" style="background-image: url('./img/slide-3.jpg');">
+          <div id="intro" style="background-image: url('./img/slider/slider4.jpg');">
             <div class="intro-content">
               <div class="row slider-row">
 
-                <div class="col-md-10">
+                <div class="col-md-10  slider-box">
                   <!-- <div> -->
                   <h1>ICONS <span>2023</span></h1>
                   <h2>3rd International Conference on Structural Integrity</h2>
@@ -170,10 +170,151 @@ include 'includes/menu.php';
             </div>
           </div>
         </div>
+
         <div class="item">
-          <div id="intro" style="background-image: url('./img/slide-4.jpg');">
+          <div id="intro" style="background-image: url('./img/slider/slider5.jpg');">
             <div class="intro-content">
               <div class="row slider-row">
+
+                <div class="col-md-10  slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider6.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10  slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider7.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10  slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider8.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10  slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider9.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10  slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider10.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10  slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider11.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row">
+
+                <div class="col-md-10  slider-box">
+                  <!-- <div> -->
+                  <h1>ICONS <span>2023</span></h1>
+                  <h2>3rd International Conference on Structural Integrity</h2>
+                  <h2>23 - 25 August, 2023</h2>
+                  <div>
+                    <a href="signup.php" class="btn-get-started ">Sign-up Now</a>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div id="intro" style="background-image: url('./img/slider/slider12.jpg');">
+            <div class="intro-content">
+              <div class="row slider-row  slider-box">
 
                 <div class="col-md-10">
                   <!-- <div> -->
@@ -189,6 +330,7 @@ include 'includes/menu.php';
             </div>
           </div>
         </div>
+
         <a class="left carousel-control" href="#carousel-default" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left fa fa-angle-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
